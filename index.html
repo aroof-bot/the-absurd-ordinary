@@ -1,1 +1,258 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Absurd Ordinary</title>
+<meta name="description" content="An independent literary, cultural and social-impact publication.">
+<style>
+:root {
+  --paper: #f3ebdd;
+  --ink: #302725;
+  --wine: #792d40;
+  --rose: #d9a1ac;
+  --olive: #899071;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, serif;
+}
+a { color: inherit; text-decoration: none; }
+.topline {
+  padding: 10px 6%;
+  border-bottom: 1px solid var(--ink);
+  font: 11px Arial, sans-serif;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+header {
+  text-align: center;
+  padding: 38px 5% 24px;
+}
+.kicker {
+  font: 11px Arial, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+h1 {
+  color: var(--wine);
+  font-size: clamp(43px, 10vw, 100px);
+  line-height: .95;
+  margin: 22px 0 12px;
+  font-weight: normal;
+  letter-spacing: -5px;
+}
+.tagline {
+  font-size: 17px;
+  font-style: italic;
+}
+nav {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: 15px 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+nav a:hover { color: var(--wine); }
+main { max-width: 1100px; margin: auto; padding: 35px 6%; }
+.issue {
+  font: 11px Arial, sans-serif;
+  letter-spacing: 2px;
+  color: var(--wine);
+  margin-bottom: 18px;
+}
+.feature {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: 35px 0;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 35px;
+  align-items: center;
+}
+.feature h2 {
+  font-size: clamp(38px, 6vw, 65px);
+  font-weight: normal;
+  line-height: 1;
+  margin: 10px 0 18px;
+}
+.feature p { font-size: 17px; line-height: 1.8; }
+.stamp {
+  background: var(--wine);
+  color: var(--paper);
+  padding: 35px 20px;
+  text-align: center;
+  transform: rotate(3deg);
+}
+.stamp strong {
+  display: block;
+  font-size: 38px;
+  font-weight: normal;
+}
+.stamp span {
+  font: 11px Arial, sans-serif;
+  letter-spacing: 2px;
+}
+.section-title {
+  font-size: 34px;
+  font-weight: normal;
+  margin: 55px 0 20px;
+}
+.stories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.story {
+  border-top: 3px solid var(--wine);
+  padding: 18px 12px 25px 0;
+}
+.story small {
+  color: var(--wine);
+  font: 10px Arial, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.story h3 { font-size: 25px; font-weight: normal; }
+.story p { line-height: 1.7; font-size: 15px; }
+.departments {
+  background: #e6d9c8;
+  padding: 28px;
+  margin-top: 45px;
+}
+.departments ul {
+  list-style: none;
+  padding: 0;
+}
+.departments li {
+  border-bottom: 1px solid #b9aa98;
+  padding: 13px 0;
+  font-size: 20px;
+}
+.ordinary {
+  background: var(--wine);
+  color: var(--paper);
+  padding: 35px;
+  margin-top: 45px;
+}
+.ordinary h2 { font-size: 38px; font-weight: normal; }
+.ordinary p { line-height: 1.8; max-width: 600px; }
+footer {
+  margin-top: 55px;
+  padding: 30px 6%;
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+  line-height: 2;
+}
+footer small {
+  font: 10px Arial, sans-serif;
+  letter-spacing: 2px;
+}
+@media(max-width:650px) {
+  .feature { grid-template-columns: 1fr; }
+  .stories { grid-template-columns: 1fr; }
+  nav { gap: 14px; }
+  h1 { letter-spacing: -3px; }
+}
+</style>
+</head>
+<body>
+
+<div class="topline">
+  <span>INDEPENDENT PUBLICATION</span>
+  <span>ISSUE NO. 001 · 2026</span>
+</div>
+
+<header>
+  <div class="kicker">Literature · Culture · Everything in between</div>
+  <h1>The Absurd<br>Ordinary</h1>
+  <div class="tagline">Ordinary life. Unordinary observations.</div>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="archive.html">Archive</a>
+  <a href="departments.html">Departments</a>
+  <a href="ordinary-matters.html">Our Initiative</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+  <div class="issue">THE FIRST EDITION · NOVEMBER 2026</div>
+
+  <section class="feature">
+    <div>
+      <div class="kicker">A NOTE FROM THE EDITOR</div>
+      <h2>So, apparently, we started a newspaper.</h2>
+      <p>A little literature, a little nonsense, a few uncomfortable questions and a rather unreasonable curiosity about being human.</p>
+      <p>Welcome to The Absurd Ordinary. Make yourself at home. Try not to take everything seriously. Except the things that matter.</p>
+    </div>
+    <div class="stamp">
+      <span>THE FIRST EDITION</span>
+      <strong>001</strong>
+      <span>WORDS WITH A PURPOSE</span>
+    </div>
+  </section>
+
+  <h2 class="section-title">Freshly unearthed.</h2>
+  <section class="stories">
+    <article class="story">
+      <small>The Editorial Room</small>
+      <h3>Things we pretend not to notice</h3>
+      <p>Essays, opinions and observations about the strange business of being alive.</p>
+    </article>
+    <article class="story">
+      <small>The Unfinished Pages</small>
+      <h3>For words that refuse to behave</h3>
+      <p>Poetry, letters, fragments and stories that have found their way here.</p>
+    </article>
+    <article class="story">
+      <small>The Nonsense Department</small>
+      <h3>Absolutely unnecessary investigations</h3>
+      <p>Everyday absurdities deserve serious journalistic attention. Obviously.</p>
+    </article>
+  </section>
+
+  <section class="departments">
+    <div class="kicker">A newspaper with several personalities</div>
+    <h2 class="section-title">The departments</h2>
+    <ul>
+      <li>The Editorial Room</li>
+      <li>The Unfinished Pages</li>
+      <li>The Bookish Bureau</li>
+      <li>The Nonsense Department</li>
+      <li>The Culture Desk</li>
+      <li>The Social Impact Desk</li>
+    </ul>
+  </section>
+
+  <section class="ordinary">
+    <div class="kicker">BEYOND THE WRITTEN WORD</div>
+    <h2>The Ordinary Matters.</h2>
+    <p>Some stories deserve more than a passing glance. Through words, awareness and action, we hope to make room for overlooked voices and meaningful change.</p>
+    <p>Literature first. Humanity always.</p>
+  </section>
+</main>
+
+<footer>
+  <div>The Absurd Ordinary</div>
+  <small>ORDINARY LIFE. UNORDINARY OBSERVATIONS.</small>
+  <p>Independent by nature. Curious by default.</p>
+  <small>FOUNDED BY SAQEEB AROOFA · 2026</small>
+</footer>
+
+</body>
+</html>
+

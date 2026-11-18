@@ -333,4 +333,136 @@ footer .signature {
     font-size: 30px;
   }
 }
+/* HOMEPAGE DESIGN COMPATIBILITY */
+
+.topline {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--ink);
+  font: 10px Arial, sans-serif;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+h1 {
+  color: var(--wine);
+  font-size: clamp(43px, 10vw, 100px);
+  font-weight: normal;
+  letter-spacing: -5px;
+  line-height: .95;
+  text-align: center;
+  margin: 22px 0 12px;
+}
+
+.tagline {
+  text-align: center;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.stamp {
+  background: var(--wine);
+  color: var(--white);
+  padding: 35px 20px;
+  text-align: center;
+  transform: rotate(3deg);
+}
+
+.stamp strong {
+  display: block;
+  font-size: 38px;
+  font-weight: normal;
+}
+
+.stamp span {
+  font: 11px Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+.section-title {
+  font-size: 34px;
+  font-weight: normal;
+  margin: 45px 0 20px;
+}
+
+.stories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.story {
+  border-top: 3px solid var(--wine);
+  padding: 18px 12px 25px 0;
+}
+
+.story small {
+  color: var(--wine);
+  font: 10px Arial, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.story h3 {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.story p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.departments {
+  background: var(--paper-dark);
+  padding: 28px;
+  margin-top: 45px;
+}
+
+.departments ul {
+  list-style: none;
+}
+
+.departments li {
+  border-bottom: 1px solid var(--line);
+  padding: 13px 0;
+  font-size: 20px;
+}
+
+.ordinary {
+  background: var(--wine);
+  color: var(--white);
+  padding: 35px;
+  margin-top: 45px;
+}
+
+.ordinary h2 {
+  font-size: 38px;
+  font-weight: normal;
+}
+
+.ordinary p {
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+@media (max-width: 700px) {
+  .topline {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  h1 {
+    letter-spacing: -3px;
+  }
+
+  .stories {
+    grid-template-columns: 1fr;
+  }
+
+  .stamp {
+    margin: 15px;
+  }
+}
 

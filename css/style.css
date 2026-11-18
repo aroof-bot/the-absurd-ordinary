@@ -49,16 +49,6 @@ header {
   border-bottom: 1px solid var(--ink);
 }
 
-header::before {
-  content: "AN INDEPENDENT LITERARY PUBLICATION";
-  display: block;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: var(--muted);
-  padding-bottom: 15px;
-}
 
 .masthead {
   text-align: center;

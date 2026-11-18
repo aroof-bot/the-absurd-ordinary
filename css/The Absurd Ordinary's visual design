@@ -1,0 +1,376 @@
+
+/* ==================================
+   THE ABSURD ORDINARY
+   A little literature. A lot of life.
+   ================================== */
+
+:root {
+  --paper: #f3ebdd;
+  --paper-dark: #e6d9c8;
+  --ink: #302725;
+  --wine: #792d40;
+  --rose: #d9a1ac;
+  --olive: #899071;
+  --gold: #c19a58;
+  --white: #fffaf0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, serif;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(#8c7250 0.45px, transparent 0.45px);
+  background-size: 8px 8px;
+}
+
+/* LINKS */
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: .3s ease;
+}
+
+a:hover {
+  color: var(--wine);
+}
+
+/* TOP ANNOUNCEMENT */
+
+.topline {
+  padding: 12px 6%;
+  border-bottom: 1px solid var(--ink);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font: 10px Arial, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* MASTHEAD */
+
+header {
+  text-align: center;
+  padding: 48px 5% 32px;
+  position: relative;
+}
+
+header::before {
+  content: "✳";
+  position: absolute;
+  left: 9%;
+  top: 40%;
+  color: var(--wine);
+  font-size: 38px;
+  transform: rotate(-15deg);
+}
+
+header::after {
+  content: "♡";
+  position: absolute;
+  right: 10%;
+  top: 28%;
+  color: var(--wine);
+  font-size: 40px;
+  transform: rotate(12deg);
+}
+
+.kicker {
+  font: 10px Arial, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: var(--wine);
+  font-size: clamp(45px, 10vw, 108px);
+  font-weight: normal;
+  line-height: .9;
+  letter-spacing: -5px;
+  margin: 25px 0 18px;
+}
+
+.tagline {
+  font-size: 17px;
+  font-style: italic;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 16px 5%;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  font: 10px Arial, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: var(--wine);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* MAIN CONTENT */
+
+main {
+  width: min(1100px, 88%);
+  margin: auto;
+  padding: 40px 0;
+}
+
+.issue {
+  color: var(--wine);
+  font: 10px Arial, sans-serif;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+/* FEATURED ARTICLE */
+
+.feature {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 40px 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.feature h2 {
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1;
+  font-weight: normal;
+  margin: 18px 0;
+}
+
+.feature p {
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.stamp {
+  background: var(--wine);
+  color: var(--paper);
+  padding: 55px 20px;
+  text-align: center;
+  outline: 1px dashed var(--paper);
+  outline-offset: -10px;
+  transform: rotate(3deg);
+  box-shadow: 7px 8px 0 var(--rose);
+}
+
+.stamp strong {
+  display: block;
+  font-size: 65px;
+  font-weight: normal;
+}
+
+.stamp span {
+  font: 10px Arial, sans-serif;
+  letter-spacing: 3px;
+}
+
+/* EDITORIAL STORIES */
+
+.section-title {
+  font-size: 38px;
+  font-weight: normal;
+  margin: 60px 0 25px;
+}
+
+.stories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.story {
+  padding: 22px 14px 25px 0;
+  border-top: 3px solid var(--wine);
+  transition: transform .25s ease;
+}
+
+.story:hover {
+  transform: translateY(-5px);
+}
+
+.story small {
+  color: var(--wine);
+  font: 10px Arial, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.story h3 {
+  font-size: 27px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.story p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* DEPARTMENTS */
+
+.departments {
+  background: var(--paper-dark);
+  padding: 35px;
+  margin-top: 55px;
+  position: relative;
+}
+
+.departments::after {
+  content: "THE USUAL SUSPECTS";
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--olive);
+  color: white;
+  padding: 8px 12px;
+  font: 9px Arial, sans-serif;
+  letter-spacing: 2px;
+  transform: rotate(3deg);
+}
+
+.departments ul {
+  list-style: none;
+  padding: 0;
+}
+
+.departments li {
+  border-bottom: 1px solid #b9aa98;
+  padding: 16px 0;
+  font-size: 21px;
+  transition: padding .2s ease;
+}
+
+.departments li:hover {
+  padding-left: 12px;
+  color: var(--wine);
+}
+
+/* SOCIAL IMPACT */
+
+.ordinary {
+  background: var(--wine);
+  color: var(--paper);
+  padding: 45px;
+  margin-top: 55px;
+  position: relative;
+}
+
+.ordinary h2 {
+  font-size: 44px;
+  font-weight: normal;
+}
+
+.ordinary p {
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 650px;
+}
+
+.ordinary::after {
+  content: "✳";
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  font-size: 65px;
+  color: var(--rose);
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 45px 6%;
+  text-align: center;
+  line-height: 2;
+  margin-top: 60px;
+}
+
+footer small {
+  font: 10px Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 650px) {
+
+  header {
+    padding: 40px 4% 30px;
+  }
+
+  header::before {
+    left: 3%;
+    font-size: 23px;
+  }
+
+  header::after {
+    right: 4%;
+    font-size: 25px;
+  }
+
+  h1 {
+    letter-spacing: -3px;
+  }
+
+  nav {
+    gap: 15px;
+    padding: 15px 4%;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  .feature {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .stories {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .departments {
+    padding: 25px 20px;
+  }
+
+  .ordinary {
+    padding: 30px 22px;
+  }
+
+  .ordinary h2 {
+    font-size: 36px;
+  }
+
+  .topline {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}

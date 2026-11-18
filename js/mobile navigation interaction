@@ -1,0 +1,17 @@
+// THE ABSURD ORDINARY
+// Little interactions, because ordinary things deserve a little drama.
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Mobile navigation
+  const menuButton = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector(".nav-links");
+
+  if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+      navigation.classList.toggle("active");
+      menuButton.classList.toggle("active");
+    });
+  }
+
+});

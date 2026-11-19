@@ -135,9 +135,13 @@ main { max-width: 1100px; margin: auto; padding: 35px 6%; }
 }
 .departments li {
   border-bottom: 1px solid #b9aa98;
-  padding: 13px 0;
   font-size: 20px;
 }
+.departments li a {
+  display: block;
+  padding: 13px 0;
+}
+.departments li a:hover { color: var(--wine); }
 .ordinary {
   background: var(--wine);
   color: var(--paper);
@@ -146,6 +150,16 @@ main { max-width: 1100px; margin: auto; padding: 35px 6%; }
 }
 .ordinary h2 { font-size: 38px; font-weight: normal; }
 .ordinary p { line-height: 1.8; max-width: 600px; }
+.button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 20px;
+  border: 1px solid var(--paper);
+  font: 11px Arial, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.button:hover { background: var(--paper); color: var(--wine); }
 footer {
   margin-top: 55px;
   padding: 30px 6%;
@@ -165,7 +179,6 @@ footer small {
   h1 { letter-spacing: -3px; }
 }
 </style>
-<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -229,12 +242,12 @@ footer small {
     <div class="kicker">A newspaper with several personalities</div>
     <h2 class="section-title">The departments</h2>
     <ul>
-      <li>The Editorial Room</li>
-      <li>The Unfinished Pages</li>
-      <li>The Bookish Bureau</li>
-      <li>The Nonsense Department</li>
-      <li>The Culture Desk</li>
-      <li>The Social Impact Desk</li>
+      <li><a href="department.html">The Editorial Room</a></li>
+      <li><a href="department.html">The Unfinished Pages</a></li>
+      <li><a href="department.html">The Bookish Bureau</a></li>
+      <li><a href="department.html">The Nonsense Department</a></li>
+      <li><a href="department.html">The Culture Desk</a></li>
+      <li><a href="department.html">The Social Impact Desk</a></li>
     </ul>
   </section>
 
@@ -243,6 +256,7 @@ footer small {
     <h2>The Ordinary Matters.</h2>
     <p>Some stories deserve more than a passing glance. Through words, awareness and action, we hope to make room for overlooked voices and meaningful change.</p>
     <p>Literature first. Humanity always.</p>
+    <a class="button" href="ordinary-matters.html">Explore the initiative</a>
   </section>
 </main>
 
@@ -252,6 +266,6 @@ footer small {
   <p>Independent by nature. Curious by default.</p>
   <small>FOUNDED BY SAQEEB AROOFA · 2026</small>
 </footer>
-<script src="js/script.js"></script>
+
 </body>
-</html>  
+</html>

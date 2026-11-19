@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,7 @@
 <meta name="description" content="An independent literary, cultural and social-impact publication.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+
 <style>
 :root {
   --paper: #f3ebdd;
@@ -55,7 +57,9 @@ a { color: inherit; text-decoration: none; }
   border: 3px double var(--wine); color: var(--wine); background: var(--paper);
   padding: 6px 10px; border-radius: 6px; font-size: 0.75rem; line-height: 1.15; text-align: center;
 }
-@media (max-width: 520px) { .stamp-top { position: static; display: inline-block; margin-bottom: 10px; } }
+@media (max-width: 520px) {
+  .stamp-top { position: static; display: inline-block; margin-bottom: 10px; }
+}
 
 /* nav */
 nav {
@@ -65,93 +69,244 @@ nav {
   font: 600 12px Inter, Arial, sans-serif; letter-spacing: 1.5px; text-transform: uppercase;
 }
 nav a { padding: 11px 2px; }
-nav a:hover, nav a:focus-visible { color: var(--wine); text-decoration: underline wavy var(--rose); text-underline-offset: 6px; }
+nav a:hover, nav a:focus-visible {
+  color: var(--wine);
+  text-decoration: underline wavy var(--rose);
+  text-underline-offset: 6px;
+}
 
 /* sections */
 section { margin: 46px 0; }
-h2 { font: 900 clamp(1.8rem, 6vw, 2.7rem)/1.05 'Playfair Display', Georgia, serif; margin: 0 0 14px; }
+h2 {
+  font: 900 clamp(1.8rem, 6vw, 2.7rem)/1.05 'Playfair Display', Georgia, serif;
+  margin: 0 0 14px;
+}
 
 /* editor's note */
 .lead { display: grid; gap: 26px; align-items: center; }
-@media (min-width: 800px) { .lead { grid-template-columns: 1.5fr 1fr; } }
+@media (min-width: 800px) {
+  .lead { grid-template-columns: 1.5fr 1fr; }
+}
 .lead h2 { font-size: clamp(2.2rem, 7vw, 3.8rem); }
-.lead h2 del { text-decoration-color: var(--wine); text-decoration-thickness: 4px; opacity: 0.6; }
-.lead h2 ins { text-decoration: none; color: var(--wine); font-style: italic; }
+.lead h2 del {
+  text-decoration-color: var(--wine);
+  text-decoration-thickness: 4px;
+  opacity: 0.6;
+}
+.lead h2 ins {
+  text-decoration: none;
+  color: var(--wine);
+  font-style: italic;
+}
 .stamp {
-  position: relative; background: var(--wine); color: var(--paper);
-  padding: 40px 20px; text-align: center; transform: rotate(3deg);
+  position: relative;
+  background: var(--wine);
+  color: var(--paper);
+  padding: 40px 20px;
+  text-align: center;
+  transform: rotate(3deg);
   box-shadow: 6px 6px 0 var(--ink);
 }
-.stamp strong { display: block; font: 900 4rem/1 'Playfair Display', serif; }
-.stamp span { font: 11px Inter, Arial, sans-serif; letter-spacing: 3px; }
+.stamp strong {
+  display: block;
+  font: 900 4rem/1 'Playfair Display', Georgia, serif;
+}
+.stamp span {
+  font: 11px Inter, Arial, sans-serif;
+  letter-spacing: 3px;
+}
 .tape {
-  position: absolute; top: -13px; left: 50%; width: 110px; height: 28px;
-  background: #899071cc; transform: translateX(-50%) rotate(-5deg);
+  position: absolute; top: -13px; left: 50%;
+  width: 110px; height: 28px;
+  background: #899071cc;
+  transform: translateX(-50%) rotate(-5deg);
 }
 .margin { display: block; margin-top: 14px; }
 
+/* featured first issue */
+.featured-issue {
+  position: relative;
+  background: var(--card);
+  border: 2px solid var(--ink);
+  padding: 28px 24px;
+  box-shadow: 7px 7px 0 var(--rose);
+  overflow: hidden;
+}
+.featured-issue::after {
+  content: "001";
+  position: absolute;
+  right: 12px;
+  bottom: -36px;
+  font: 900 8rem/1 'Playfair Display', Georgia, serif;
+  color: #792d4010;
+  pointer-events: none;
+}
+.issue-label {
+  display: inline-block;
+  color: var(--wine);
+  border: 1.5px solid var(--wine);
+  padding: 3px 10px;
+  font: 11px 'Special Elite', monospace;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+.featured-issue h2 {
+  font-size: clamp(2rem, 6vw, 3.3rem);
+  max-width: 680px;
+  margin-bottom: 10px;
+}
+.featured-issue .issue-subtitle {
+  color: var(--wine);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+.featured-issue p {
+  max-width: 650px;
+}
+.issue-meta {
+  font: 11px Inter, Arial, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.issue-button {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin-top: 12px;
+  padding: 13px 22px;
+  background: var(--wine);
+  color: var(--paper);
+  font: 600 12px Inter, Arial, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform 0.15s;
+}
+.issue-button:hover,
+.issue-button:focus-visible {
+  transform: translate(-3px, -3px);
+}
+
 /* story cards */
 .stories { display: grid; gap: 18px; }
-@media (min-width: 700px) { .stories { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 700px) {
+  .stories { grid-template-columns: repeat(3, 1fr); }
+}
 .story {
-  background: var(--card); border: 1.5px solid var(--ink); padding: 18px; position: relative;
+  background: var(--card);
+  border: 1.5px solid var(--ink);
+  padding: 18px;
+  position: relative;
   box-shadow: 4px 4px 0 var(--rose);
 }
 .story:nth-child(1) { transform: rotate(-0.7deg); }
 .story:nth-child(2) { transform: rotate(0.6deg); }
 .story:nth-child(3) { transform: rotate(-0.4deg); }
 .story small {
-  display: inline-block; border: 1.5px solid var(--wine); color: var(--wine);
-  padding: 1px 8px; font: 11px 'Special Elite', monospace; margin-bottom: 8px;
+  display: inline-block;
+  border: 1.5px solid var(--wine);
+  color: var(--wine);
+  padding: 1px 8px;
+  font: 11px 'Special Elite', monospace;
+  margin-bottom: 8px;
 }
-.story h3 { font: 700 1.5rem/1.15 'Playfair Display', serif; margin: 6px 0; }
+.story h3 {
+  font: 700 1.5rem/1.15 'Playfair Display', Georgia, serif;
+  margin: 6px 0;
+}
 .story p { font-size: 0.95rem; margin: 0; }
 .fn { font-size: 0.78rem; opacity: 0.85; margin-top: 14px; }
 
 /* departments */
 .depts { display: grid; gap: 12px; }
-@media (min-width: 620px) { .depts { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 900px) { .depts { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 620px) {
+  .depts { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 900px) {
+  .depts { grid-template-columns: repeat(3, 1fr); }
+}
 .dept {
-  display: block; background: var(--card); border-left: 9px solid var(--olive);
-  padding: 14px 16px; transition: transform 0.15s;
+  display: block;
+  background: var(--card);
+  border-left: 9px solid var(--olive);
+  padding: 14px 16px;
+  transition: transform 0.15s;
 }
 .dept:nth-child(3n+2) { border-color: var(--rose); }
 .dept:nth-child(3n) { border-color: var(--wine); }
-.dept:hover, .dept:focus-visible { transform: translate(-3px, -3px); box-shadow: 4px 4px 0 var(--ink); }
-.dept b { display: block; font: 700 1.15rem 'Playfair Display', serif; }
-.dept small { font: 0.85rem Inter, Arial, sans-serif; opacity: 0.85; }
+.dept:hover, .dept:focus-visible {
+  transform: translate(-3px, -3px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.dept b {
+  display: block;
+  font: 700 1.15rem 'Playfair Display', Georgia, serif;
+}
+.dept small {
+  font: 0.85rem Inter, Arial, sans-serif;
+  opacity: 0.85;
+}
 
-/* ordinary matters (torn edge) */
+/* ordinary matters */
 .matters {
-  background: var(--wine); color: var(--paper); text-align: center;
-  padding: 56px 22px 40px; margin: 56px 0;
+  background: var(--wine);
+  color: var(--paper);
+  text-align: center;
+  padding: 56px 22px 40px;
+  margin: 56px 0;
   clip-path: polygon(0 3%, 4% 0, 9% 3%, 15% 0, 22% 2%, 30% 0, 38% 3%, 47% 0, 55% 2%, 64% 0, 72% 3%, 81% 0, 90% 2%, 100% 0, 100% 100%, 0 100%);
 }
 .matters .note { color: var(--rose); }
 .matters p { max-width: 560px; margin: 8px auto; }
 .button {
-  display: inline-block; margin-top: 14px; padding: 12px 22px;
-  background: var(--paper); color: var(--wine); font: 600 12px Inter, Arial, sans-serif;
-  letter-spacing: 2px; text-transform: uppercase; box-shadow: 4px 4px 0 var(--rose);
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 22px;
+  background: var(--paper);
+  color: var(--wine);
+  font: 600 12px Inter, Arial, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 var(--rose);
 }
-.button:hover, .button:focus-visible { transform: translate(-2px, -2px); }
+.button:hover, .button:focus-visible {
+  transform: translate(-2px, -2px);
+}
 
 /* thought + editor */
 .two { display: grid; gap: 18px; }
-@media (min-width: 760px) { .two { grid-template-columns: 1fr 1fr; } }
-.box { border: 2px dashed var(--ink); background: var(--card); padding: 22px; }
-.box q { font: italic 1.35rem/1.4 Lora, serif; quotes: "\201C" "\201D"; }
+@media (min-width: 760px) {
+  .two { grid-template-columns: 1fr 1fr; }
+}
+.box {
+  border: 2px dashed var(--ink);
+  background: var(--card);
+  padding: 22px;
+}
+.box q {
+  font: italic 1.35rem/1.4 Lora, Georgia, serif;
+  quotes: "\201C" "\201D";
+}
 .box del { color: var(--wine); }
 
 /* footer */
 footer {
-  border-top: 3px double var(--ink); margin-top: 50px; padding: 24px 0 44px;
-  text-align: center; font-size: 0.9rem; line-height: 1.9;
+  border-top: 3px double var(--ink);
+  margin-top: 50px;
+  padding: 24px 0 44px;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.9;
 }
-footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display: block; }
+footer small {
+  font: 10px Inter, Arial, sans-serif;
+  letter-spacing: 2px;
+  display: block;
+}
 </style>
 </head>
+
 <body>
 <div class="wrap">
 
@@ -165,7 +320,9 @@ footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display
   <div class="stamp-top type">APPROVED BY<br>NOBODY<br>★</div>
   <div class="kicker">Literature · Culture · Everything in between</div>
   <h1>The <em>Absurd</em><br>Ordinary</h1>
-  <svg class="squig" viewBox="0 0 280 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M3 8c12-10 22 10 34 0s22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0"/></svg>
+  <svg class="squig" viewBox="0 0 280 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+    <path d="M3 8c12-10 22 10 34 0s22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0"/>
+  </svg>
   <p class="tagline">Ordinary life. Unordinary observations.</p>
 </header>
 
@@ -186,12 +343,24 @@ footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display
     <p>Welcome to The Absurd Ordinary. Make yourself at home. Try not to take everything seriously. Except the things that matter.</p>
     <span class="note margin">(editor’s note: yes, I’m also surprised)</span>
   </div>
+
   <div class="stamp">
     <div class="tape"></div>
     <span>THE FIRST EDITION</span>
     <strong>001</strong>
     <span>WORDS WITH A PURPOSE</span>
   </div>
+</section>
+
+<!-- FEATURED FIRST ISSUE -->
+<section class="featured-issue">
+  <div class="issue-label">THE FIRST ISSUE · NOVEMBER 2026</div>
+  <div class="kicker">Fresh from the printing press</div>
+  <h2>So, apparently, we started a newspaper.</h2>
+  <p class="issue-subtitle">The ordinary begins here.</p>
+  <p>Our first edition is here. A note from the editor, a little reflection on the art of being ordinary, and the beginning of something we've been meaning to put into the world.</p>
+  <div class="issue-meta">Issue No. 001 · Written by Saqeeb Aroofa</div>
+  <a class="issue-button" href="issue-001.html">Read Issue 001</a>
 </section>
 
 <section>
@@ -202,11 +371,13 @@ footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display
       <h3>Things we pretend not to notice</h3>
       <p>Essays, opinions and observations about the strange business of being alive.</p>
     </article>
+
     <article class="story">
       <small>The Unfinished Pages</small>
       <h3>For words that refuse to behave</h3>
       <p>Poetry, letters, fragments and stories that have found their way here.</p>
     </article>
+
     <article class="story">
       <small>The Nonsense Department</small>
       <h3>Absolutely unnecessary investigations</h3>
@@ -242,6 +413,7 @@ footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display
     <p class="type" style="margin-top:0">THOUGHT OF THE DAY</p>
     <q>There is something worth writing about in almost everything. Even the ridiculous bits.</q>
   </div>
+
   <div class="box">
     <p class="type" style="margin-top:0">THE EDITOR IS LOSING IT</p>
     <p>Today’s status: <del>fully in control</del> mostly in control. <span class="note">(ask me next week)</span></p>
@@ -258,3 +430,4 @@ footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display
 </div>
 </body>
       </html>
+      

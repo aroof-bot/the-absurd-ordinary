@@ -1,1 +1,386 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Issue 001 | The Absurd Ordinary</title>
+<meta name="description" content="The debut edition of The Absurd Ordinary, featuring an editorial note and The Art of Being Ordinary by Saqeeb Aroofa.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper: #f3ebdd;
+  --card: #fbf6ec;
+  --ink: #302725;
+  --wine: #792d40;
+  --rose: #d9a1ac;
+  --olive: #899071;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  background-image: radial-gradient(#30272522 0.7px, transparent 0.8px);
+  background-size: 6px 6px;
+  color: var(--ink);
+  font: 17px/1.85 Lora, Georgia, serif;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.type {
+  font-family: 'Special Elite', 'Courier New', monospace;
+}
+
+.note {
+  font-family: Caveat, cursive;
+  font-weight: 700;
+  color: var(--wine);
+}
+
+.kicker {
+  font: 11px Inter, Arial, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--wine);
+}
+
+.topline {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 2px solid var(--ink);
+  padding: 10px 0 6px;
+  font-size: 0.85rem;
+}
+
+.mast {
+  text-align: center;
+  padding: 34px 0 24px;
+}
+
+.mast h1 {
+  font: 900 clamp(2.5rem, 10vw, 5rem)/0.98 'Playfair Display', Georgia, serif;
+  margin: 12px 0;
+}
+
+.mast h1 em { color: var(--wine); }
+
+.tagline {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.stamp {
+  display: inline-block;
+  border: 3px double var(--wine);
+  color: var(--wine);
+  padding: 7px 14px;
+  transform: rotate(-4deg);
+  font: 12px 'Special Elite', monospace;
+  margin: 12px 0;
+}
+
+nav {
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 22px;
+  font: 600 12px Inter, Arial, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+nav a { padding: 12px 2px; }
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--wine);
+  text-decoration: underline;
+}
+
+section { margin: 48px 0; }
+
+h2 {
+  font: 900 clamp(2rem, 7vw, 3rem)/1.15 'Playfair Display', Georgia, serif;
+  margin: 10px 0 6px;
+}
+
+h3 {
+  font: 700 1.4rem 'Playfair Display', Georgia, serif;
+  margin: 0 0 6px;
+}
+
+.block {
+  background: var(--card);
+  border: 1.5px solid var(--ink);
+  padding: clamp(20px, 5vw, 38px);
+  box-shadow: 5px 5px 0 var(--rose);
+  position: relative;
+}
+
+.block p { margin: 0 0 18px; }
+
+.block p:last-child { margin-bottom: 0; }
+
+.author {
+  font: 600 12px Inter, Arial, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--wine);
+  margin: 16px 0 26px;
+}
+
+.editorial {
+  font-size: 1.04rem;
+}
+
+.article {
+  font-size: 1.04rem;
+}
+
+.article p {
+  margin-bottom: 22px;
+}
+
+.section-divider {
+  text-align: center;
+  margin: 48px 0;
+  color: var(--wine);
+  font-size: 1.5rem;
+  letter-spacing: 10px;
+}
+
+.issue-label {
+  display: inline-block;
+  background: var(--wine);
+  color: var(--paper);
+  padding: 8px 14px;
+  font: 11px Inter, Arial, sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.pullquote {
+  border-left: 4px solid var(--rose);
+  padding: 8px 0 8px 20px;
+  margin: 28px 0;
+  color: var(--wine);
+  font: italic 1.3rem/1.6 'Playfair Display', Georgia, serif;
+}
+
+.end-note {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.end-note .note {
+  font-size: 1.8rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 22px;
+  background: var(--wine);
+  color: var(--paper);
+  font: 600 12px Inter, Arial, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 var(--rose);
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translate(-2px, -2px);
+}
+
+footer {
+  border-top: 3px double var(--ink);
+  margin-top: 55px;
+  padding: 26px 0 42px;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+footer small {
+  display: block;
+  font: 10px Inter, Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  .topline { font-size: 0.75rem; }
+  nav { gap: 2px 14px; }
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<div class="topline type">
+  <span>Issue No. 001</span>
+  <span>November 2026</span>
+  <span>The beginning</span>
+</div>
+
+<header class="mast">
+  <div class="kicker">The Absurd Ordinary presents</div>
+
+  <h1>The ordinary <em>begins here.</em></h1>
+
+  <div class="stamp">OUR DEBUT EDITION · 001</div>
+
+  <p class="tagline">Ordinary life. Unordinary observations.</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="archive.html">Archive</a>
+  <a href="department.html">Departments</a>
+  <a href="ordinary-matters.html">Our Initiative</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section id="editorial">
+  <div class="kicker">01 · From the editor's desk</div>
+
+  <h2>A Note Before We Begin</h2>
+
+  <div class="author">By Saqeeb Aroofa · Editor-in-Chief</div>
+
+  <div class="block editorial">
+
+    <p>There are approximately eight billion people walking around with a head full of thoughts, and somehow we still manage to ask each other, "What's up?" and answer, "Nothing much."</p>
+
+    <p>Well, something is always up.</p>
+
+    <p>Someone is having a terrible Tuesday. Someone is falling in love with a song they cannot explain. Someone is questioning their entire existence while waiting for their tea to cool down. And someone, somewhere, is probably arguing with a ceiling fan.</p>
+
+    <p>The ordinary is never quite ordinary when you look closely.</p>
+
+    <p>That is where <strong>The Absurd Ordinary</strong> begins.</p>
+
+    <p>We wanted a space for the things that don't always make it into conversations. The observations, contradictions, uncomfortable questions, ridiculous little incidents and stories that deserve more than a passing glance.</p>
+
+    <p>This isn't a place where everything needs to be profound. Sometimes a cup of tea is just a cup of tea. Sometimes it is the only thing holding a person's afternoon together. We leave room for both.</p>
+
+    <p>Here, we intend to question, laugh, disagree, discover and occasionally get carried away with a sentence. We welcome different voices, unusual perspectives and the kind of honesty that doesn't always arrive neatly packaged.</p>
+
+    <p>We don't promise to make sense of everything. Frankly, that sounds exhausting.</p>
+
+    <p>But we do promise to pay attention.</p>
+
+    <p>So, welcome to our little corner of the wonderfully ridiculous world.</p>
+
+    <p>The ordinary has been acting suspiciously interesting lately.</p>
+
+    <p>Let's investigate.</p>
+
+    <div class="author">
+      Saqeeb Aroofa<br>
+      Editor-in-Chief, The Absurd Ordinary
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider">✳ ✳ ✳</div>
+
+<section id="featured">
+  <div class="kicker">02 · The featured article</div>
+
+  <h2>The Art of Being Ordinary</h2>
+
+  <p class="tagline">Why are we so busy becoming extraordinary that we forget to live?</p>
+
+  <div class="author">By Saqeeb Aroofa</div>
+
+  <div class="block article">
+
+    <p>Somewhere along the way, being ordinary became an insult.</p>
+
+    <p>We are encouraged to stand out, make a difference, build a legacy, become somebody. Every little achievement deserves an announcement, every hobby needs potential, and apparently even resting should contribute to our personal development.</p>
+
+    <p>God forbid someone simply exists without turning it into a success story.</p>
+
+    <p>We have somehow made a competition out of living. There are milestones to reach, goals to accomplish, places to visit, people to impress and versions of ourselves we are constantly expected to become. Even a perfectly peaceful afternoon can begin to feel like wasted time if we haven't documented it, monetised it or at least taken a decent photograph.</p>
+
+    <p>But what exactly is wrong with being ordinary?</p>
+
+    <p>There is a certain beauty in the person who takes the same route home every evening. In the shopkeeper who remembers what you usually buy. In the mother who asks whether you've eaten, even when she already knows the answer. In the friend who sends you something ridiculous simply because it reminded them of you.</p>
+
+    <p>None of these moments will probably make headlines. Nobody is handing out awards for remembering someone's tea preference or making room for a stranger on a crowded bus. Yet these are the little things that quietly hold our lives together.</p>
+
+    <div class="pullquote">
+      Perhaps we have mistaken being noticed for being meaningful.
+    </div>
+
+    <p>The truth is, not every life needs a remarkable plot twist. Not every person has to be exceptionally talented, wildly successful or endlessly interesting. Some people are simply trying to get through the week without losing their keys, their patience or their remaining brain cells. And honestly, that is a respectable achievement.</p>
+
+    <p>There is also something rather exhausting about constantly trying to become a better version of ourselves. Better, according to whom? And how many versions must we go through before we are finally allowed to feel enough?</p>
+
+    <p>Maybe the ordinary isn't a place we settle for when extraordinary things don't happen. Maybe it is where most of life has been happening all along.</p>
+
+    <p>In the meals we eat without photographing. In conversations that wander nowhere. In the laughter that interrupts a serious discussion. In the familiar silence between people who don't need to explain themselves.</p>
+
+    <p>We spend so much time waiting for life to become interesting that we sometimes fail to notice it already is.</p>
+
+    <p>So here's a small, possibly unreasonable suggestion: let a day be uneventful. Read a book without turning it into a productivity challenge. Take a walk without tracking the distance. Make a cup of tea without calling it a ritual. Be someone without constantly trying to become someone else.</p>
+
+    <p>The world will survive one less extraordinary achievement.</p>
+
+    <p>And perhaps, in the middle of all this pressure to become unforgettable, there is something wonderfully rebellious about being ordinary.</p>
+
+    <p>Not because we have nothing more to offer.</p>
+
+    <p>But because we don't have to prove our existence every single day.</p>
+
+    <div class="author">Saqeeb Aroofa · The Absurd Ordinary</div>
+
+  </div>
+</section>
+
+<section class="end-note">
+  <div class="kicker">End of issue 001</div>
+
+  <p class="note">Thank you for reading our first little edition.</p>
+
+  <p>There is more to come. We promise to keep looking.</p>
+
+  <a class="button" href="archive.html">Back to the archive</a>
+</section>
+
+<footer>
+  <div><b>The Absurd Ordinary</b></div>
+  <small>ORDINARY LIFE. UNORDINARY OBSERVATIONS.</small>
+  <small>FOUNDED BY SAQEEB AROOFA · 2026</small>
+</footer>
+
+</div>
+</body>
+</html>
+

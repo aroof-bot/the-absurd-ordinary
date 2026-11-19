@@ -1,63 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | The Absurd Ordinary</title>
-  <meta name="description" content="Write to The Absurd Ordinary.">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | The Absurd Ordinary</title>
+<meta name="description" content="Write to The Absurd Ordinary: enquiries, submissions, collaborations and letters.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f3ebdd;
+  --card: #fbf6ec;
+  --ink: #302725;
+  --wine: #792d40;
+  --rose: #d9a1ac;
+  --olive: #899071;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background-color: var(--paper);
+  background-image: radial-gradient(#30272522 0.7px, transparent 0.8px);
+  background-size: 6px 6px;
+  color: var(--ink);
+  font: 17px/1.7 Lora, Georgia, serif;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 18px; }
+.type { font-family: 'Special Elite', 'Courier New', monospace; }
+.note { font-family: Caveat, cursive; font-weight: 700; color: var(--wine); font-size: 1.4rem; line-height: 1.1; }
+.kicker { font: 11px Inter, Arial, sans-serif; letter-spacing: 4px; text-transform: uppercase; color: var(--wine); }
+
+.topline {
+  display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  border-bottom: 2px solid var(--ink); padding: 10px 0 6px; font-size: 0.85rem;
+}
+.mast { text-align: center; padding: 26px 0 8px; position: relative; }
+.mast h1 {
+  margin: 10px 0 0;
+  font: 900 clamp(2.4rem, 10vw, 5rem)/0.95 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.02em;
+}
+.mast h1 em { color: var(--wine); }
+.squig { display: block; margin: 8px auto 0; width: min(240px, 70%); color: var(--wine); }
+.tagline { font-style: italic; font-size: 1.15rem; margin: 10px 0 0; }
+.stamp-top {
+  position: absolute; right: 0; top: 10px; transform: rotate(9deg);
+  border: 3px double var(--wine); color: var(--wine); background: var(--paper);
+  padding: 6px 10px; border-radius: 6px; font-size: 0.75rem; line-height: 1.15; text-align: center;
+}
+@media (max-width: 520px) { .stamp-top { position: static; display: inline-block; margin-bottom: 10px; } }
+
+nav {
+  border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink);
+  margin-top: 16px; padding: 4px 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 22px;
+  font: 600 12px Inter, Arial, sans-serif; letter-spacing: 1.5px; text-transform: uppercase;
+}
+nav a { padding: 11px 2px; }
+nav a:hover, nav a:focus-visible { color: var(--wine); text-decoration: underline wavy var(--rose); text-underline-offset: 6px; }
+nav a.here { color: var(--wine); text-decoration: underline; text-underline-offset: 6px; }
+
+section { margin: 42px 0; }
+h2 { font: 900 clamp(1.7rem, 6vw, 2.5rem)/1.1 'Playfair Display', Georgia, serif; margin: 8px 0 14px; }
+.block {
+  background: var(--card); border: 1.5px solid var(--ink); padding: 22px;
+  box-shadow: 5px 5px 0 var(--rose); position: relative;
+}
+.block p { margin: 0 0 12px; }
+.block p:last-child { margin-bottom: 0; }
+.tape {
+  position: absolute; top: -13px; left: 50%; width: 110px; height: 28px;
+  background: #899071cc; transform: translateX(-50%) rotate(-5deg);
+}
+.reasons { list-style: none; padding: 0; margin: 12px 0 0; }
+.reasons li { border-top: 1px dashed #30272566; padding: 12px 0; }
+.reasons b { font: 700 1.15rem 'Playfair Display', serif; display: block; }
+.reasons small { font: 0.9rem Inter, Arial, sans-serif; opacity: 0.85; }
+.matters {
+  background: var(--wine); color: var(--paper); text-align: center;
+  padding: 56px 22px 40px; margin: 56px 0;
+  clip-path: polygon(0 3%, 4% 0, 9% 3%, 15% 0, 22% 2%, 30% 0, 38% 3%, 47% 0, 55% 2%, 64% 0, 72% 3%, 81% 0, 90% 2%, 100% 0, 100% 100%, 0 100%);
+}
+.matters h2 { color: var(--paper); }
+.matters .note { color: var(--rose); }
+.button {
+  display: inline-block; margin: 14px 6px 0; padding: 13px 22px;
+  background: var(--paper); color: var(--wine); font: 600 12px Inter, Arial, sans-serif;
+  letter-spacing: 2px; text-transform: uppercase; box-shadow: 4px 4px 0 var(--rose);
+  overflow-wrap: anywhere;
+}
+.button:hover, .button:focus-visible { transform: translate(-2px, -2px); }
+.fn { font-size: 0.78rem; opacity: 0.85; }
+
+footer {
+  border-top: 3px double var(--ink); margin-top: 50px; padding: 24px 0 44px;
+  text-align: center; font-size: 0.9rem; line-height: 1.9;
+}
+footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display: block; }
+</style>
 </head>
-
 <body>
+<div class="wrap">
 
-<header>
-  <div class="kicker">Correspondence department</div>
-  <h1>Say something.</h1>
-  <p class="tagline">Letters are lovely. Emails are acceptable too.</p>
+<div class="topline type">
+  <span>Issue No. 001</span>
+  <span>Letters to the editor</span>
+  <span>Weekly, allegedly</span>
+</div>
+
+<header class="mast">
+  <div class="stamp-top type">PLEASE<br>WRITE<br>★</div>
+  <div class="kicker">Correspondence</div>
+  <h1>Write to <em>the paper.</em></h1>
+  <svg class="squig" viewBox="0 0 280 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M3 8c12-10 22 10 34 0s22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0"/></svg>
+  <p class="tagline">Ideas, questions, collaborations and the occasional complaint.</p>
 </header>
 
-<button class="menu-toggle" aria-label="Toggle navigation">
-  ☰
-</button>
-
-<nav class="nav-links">
+<nav>
   <a href="index.html">Home</a>
   <a href="archive.html">Archive</a>
-  <a href="departments.html">Departments</a>
+  <a href="department.html">Departments</a>
   <a href="ordinary-matters.html">Our Initiative</a>
   <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
+  <a class="here" href="contact.html">Contact</a>
 </nav>
 
-<main>
-  <section class="ordinary-matters">
-    <h2>Write to us.</h2>
-    <p>For editorial enquiries, submissions and collaborations:</p>
+<section>
+  <div class="block">
+    <div class="tape"></div>
+    <div class="kicker">What to write about</div>
+    <h2>Five good reasons to send a letter.</h2>
+    <ul class="reasons">
+      <li><b>Editorial enquiries</b><small>Questions about the publication and what we publish.</small></li>
+      <li><b>Guest submissions</b><small>Essays, poetry, microfiction and more. Sending a piece doesn’t guarantee publication.</small></li>
+      <li><b>Collaborations</b><small>Literary partnerships and shared projects.</small></li>
+      <li><b>Social-impact partnerships</b><small>Organisations interested in working with The Ordinary Matters.</small></li>
+      <li><b>Reader correspondence</b><small>Thoughts, corrections and kind words are all welcome.</small></li>
+    </ul>
+  </div>
+</section>
 
-    <p>
-      Email:
-      <a href="mailto:aroofasaqeeb@gmail.com">
-        aroofasaqeeb@gmail.com
-      </a>
-    </p>
+<section class="matters">
+  <p class="note">the address</p>
+  <h2>Drop us a line.</h2>
+  <p>Tell us what it’s about in the subject line, and we’ll read it.</p>
+  <a class="button" href="mailto:aroofasaqeeb@gmail.com">aroofasaqeeb@gmail.com</a>
+  <a class="button" href="https://instagram.com/saqeebaroofa.writes">Instagram</a>
+</section>
 
-    <p>
-      Instagram:
-      <a href="https://www.instagram.com/saqeebaroofa.writes/" target="_blank">
-        @saqeebaroofa.writes
-      </a>
-    </p>
-  </section>
-</main>
+<p class="fn">* Footnote nobody asked for: please don’t send sensitive personal details by email. If a story involves risk, tell us first and we’ll work out how to protect the people in it.</p>
 
 <footer>
-  <div>The Absurd Ordinary</div>
+  <div><b>The Absurd Ordinary</b></div>
   <small>ORDINARY LIFE. UNORDINARY OBSERVATIONS.</small>
-  <p>Independent by nature. Curious by default.</p>
   <small>FOUNDED BY SAQEEB AROOFA · 2026</small>
 </footer>
 
-<script src="js/script.js"></script>
-
+</div>
 </body>
 </html>

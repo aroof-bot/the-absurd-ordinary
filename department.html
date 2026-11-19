@@ -1,10 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Archive | The Absurd Ordinary</title>
-<meta name="description" content="Every issue of The Absurd Ordinary, and a shelf from the editor.">
+<title>Departments | The Absurd Ordinary</title>
+<meta name="description" content="The six editorial departments of The Absurd Ordinary.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Special+Elite&display=swap" rel="stylesheet">
 <style>
@@ -63,52 +63,41 @@ nav a { padding: 11px 2px; }
 nav a:hover, nav a:focus-visible { color: var(--wine); text-decoration: underline wavy var(--rose); text-underline-offset: 6px; }
 nav a.here { color: var(--wine); text-decoration: underline; text-underline-offset: 6px; }
 
-section { margin: 42px 0; }
-h2 { font: 900 clamp(1.7rem, 6vw, 2.5rem)/1.1 'Playfair Display', Georgia, serif; margin: 8px 0 14px; }
-h3 { font: 700 1.5rem/1.15 'Playfair Display', serif; margin: 4px 0 8px; }
-.block {
-  background: var(--card); border: 1.5px solid var(--ink); padding: 22px;
-  box-shadow: 5px 5px 0 var(--rose); position: relative;
+.jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; }
+.jump a {
+  border: 1.5px solid var(--wine); color: var(--wine); padding: 6px 12px; background: var(--card);
+  font: 600 11px Inter, Arial, sans-serif; letter-spacing: 1.5px; text-transform: uppercase;
 }
-.block p { margin: 0 0 12px; }
-.block p:last-child { margin-bottom: 0; }
-.tape {
-  position: absolute; top: -13px; left: 50%; width: 110px; height: 28px;
-  background: #899071cc; transform: translateX(-50%) rotate(-5deg);
-}
+.jump a:hover, .jump a:focus-visible { background: var(--wine); color: var(--paper); }
 
-.issue { display: grid; gap: 18px; align-items: center; }
-@media (min-width: 620px) { .issue { grid-template-columns: auto 1fr; } }
-.num {
-  background: var(--wine); color: var(--paper); text-align: center;
-  padding: 22px 26px; transform: rotate(-2deg); box-shadow: 5px 5px 0 var(--ink);
+section { margin: 36px 0; }
+.dept {
+  background: var(--card); border: 1.5px solid var(--ink); border-left: 10px solid var(--olive);
+  padding: 22px; box-shadow: 5px 5px 0 var(--rose); scroll-margin-top: 16px;
 }
-.num strong { display: block; font: 900 3.4rem/1 'Playfair Display', serif; }
-.num span { font: 11px Inter, Arial, sans-serif; letter-spacing: 3px; }
+section:nth-of-type(3n+2) .dept { border-left-color: var(--rose); box-shadow: 5px 5px 0 var(--olive); }
+section:nth-of-type(3n) .dept { border-left-color: var(--wine); }
+.dept h2 { font: 900 clamp(1.6rem, 6vw, 2.2rem)/1.1 'Playfair Display', Georgia, serif; margin: 6px 0 8px; }
+.dept p { margin: 0 0 10px; }
+.dept ul { margin: 10px 0 0; padding-left: 20px; font: 0.95rem/1.7 Inter, Arial, sans-serif; }
+.dept .empty { font-family: 'Special Elite', monospace; font-size: 0.85rem; color: var(--wine); margin-top: 14px; }
+
+.matters {
+  background: var(--wine); color: var(--paper); text-align: center;
+  padding: 56px 22px 40px; margin: 56px 0;
+  clip-path: polygon(0 3%, 4% 0, 9% 3%, 15% 0, 22% 2%, 30% 0, 38% 3%, 47% 0, 55% 2%, 64% 0, 72% 3%, 81% 0, 90% 2%, 100% 0, 100% 100%, 0 100%);
+}
+.matters h2 { color: var(--paper); font: 900 clamp(1.7rem, 6vw, 2.3rem)/1.1 'Playfair Display', serif; margin: 6px 0 12px; }
+.matters .note { color: var(--rose); }
+.matters p { max-width: 560px; margin: 8px auto; }
 .button {
   display: inline-block; margin-top: 14px; padding: 12px 22px;
-  background: var(--wine); color: var(--paper); font: 600 12px Inter, Arial, sans-serif;
+  background: var(--paper); color: var(--wine); font: 600 12px Inter, Arial, sans-serif;
   letter-spacing: 2px; text-transform: uppercase; box-shadow: 4px 4px 0 var(--rose);
 }
 .button:hover, .button:focus-visible { transform: translate(-2px, -2px); }
-
-.shelf { display: grid; gap: 24px; align-items: start; }
-@media (min-width: 620px) { .shelf { grid-template-columns: 190px 1fr; } }
-.book {
-  background: var(--wine); color: var(--paper); padding: 22px 16px;
-  min-height: 250px; display: flex; flex-direction: column; justify-content: space-between;
-  text-align: center; border: 3px double var(--rose); transform: rotate(-2.5deg);
-  box-shadow: 6px 6px 0 var(--ink); max-width: 210px; margin: 0 auto;
-}
-.book b { font: italic 700 1.55rem/1.1 'Playfair Display', serif; }
-.book small { font: 10px Inter, Arial, sans-serif; letter-spacing: 3px; text-transform: uppercase; }
-.book .dot { color: var(--rose); }
-.facts { list-style: none; margin: 14px 0 0; padding: 0; font: 0.9rem/1.5 Inter, Arial, sans-serif; }
-.facts li { border-top: 1px dashed #30272566; padding: 8px 0; display: flex; justify-content: space-between; gap: 12px; }
-.facts li span:first-child { opacity: 0.7; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.72rem; }
-.facts li span:last-child { text-align: right; }
-
 .fn { font-size: 0.78rem; opacity: 0.85; }
+
 footer {
   border-top: 3px double var(--ink); margin-top: 50px; padding: 24px 0 44px;
   text-align: center; font-size: 0.9rem; line-height: 1.9;
@@ -121,72 +110,104 @@ footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display
 
 <div class="topline type">
   <span>Issue No. 001</span>
-  <span>The back catalogue</span>
+  <span>The newsroom directory</span>
   <span>Weekly, allegedly</span>
 </div>
 
 <header class="mast">
-  <div class="stamp-top type">FILED<br>UNDER<br>★</div>
-  <div class="kicker">The archive</div>
-  <h1>Everything we’ve <em>printed.</em></h1>
+  <div class="stamp-top type">SIX<br>DESKS<br>★</div>
+  <div class="kicker">A newspaper with several personalities</div>
+  <h1>The <em>departments.</em></h1>
   <svg class="squig" viewBox="0 0 280 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M3 8c12-10 22 10 34 0s22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0"/></svg>
-  <p class="tagline">So far, that’s one issue. We’re working on it.</p>
+  <p class="tagline">Pick a desk. Every one of them is slightly understaffed.</p>
 </header>
 
 <nav>
   <a href="index.html">Home</a>
-  <a class="here" href="archive.html">Archive</a>
-  <a href="department.html">Departments</a>
+  <a href="archive.html">Archive</a>
+  <a class="here" href="department.html">Departments</a>
   <a href="ordinary-matters.html">Our Initiative</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
 </nav>
 
+<div class="jump">
+  <a href="#editorial-room">Editorial Room</a>
+  <a href="#unfinished-pages">Unfinished Pages</a>
+  <a href="#bookish-bureau">Bookish Bureau</a>
+  <a href="#nonsense">Nonsense</a>
+  <a href="#culture-desk">Culture Desk</a>
+  <a href="#social-impact">Social Impact</a>
+</div>
+
 <section>
-  <div class="kicker">Issues</div>
-  <h2>The weekly editions.</h2>
-  <div class="block">
-    <div class="tape"></div>
-    <div class="issue">
-      <div class="num"><span>ISSUE NO.</span><strong>001</strong><span>NOVEMBER 2026</span></div>
-      <div>
-        <h3>So, apparently, we started a newspaper.</h3>
-        <p>The first edition: an editor’s note, and the start of the literary side and the conscience of the publication.</p>
-        <a class="button" href="index.html">Read the issue</a>
-      </div>
-    </div>
-  </div>
-  <p class="fn">* Footnote nobody asked for: new issues will appear here, newest first.</p>
+  <article class="dept" id="editorial-room">
+    <div class="kicker">Desk 01</div>
+    <h2>The Editorial Room</h2>
+    <p>Where we think out loud, preferably with evidence.</p>
+    <ul><li>Essays</li><li>Opinions</li><li>Personal observations</li><li>Social commentary</li><li>Reflections</li></ul>
+    <div class="empty">NO PIECES YET. SOON.</div>
+  </article>
 </section>
 
 <section>
-  <div class="kicker">From the editor’s shelf</div>
-  <h2>A book that came first.</h2>
-  <div class="block">
-    <div class="shelf">
-      <div class="book">
-        <small>Prose poetry</small>
-        <b>Maps for the Unnamed</b>
-        <small>Saqeeb Aroofa <span class="dot">★</span></small>
-      </div>
-      <div>
-        <div class="kicker">Published work</div>
-        <h3>Maps for the Unnamed</h3>
-        <p>Maps for the Unnamed is a collection of 60 prose-poetry pieces exploring unnamed feelings, quiet struggles, unspoken thoughts and the complicated landscapes of being human. It gives language to emotions that often remain unexplained, offering readers a place to recognise themselves in words they may never have known how to express.</p>
-        <p>Written and completed at seventeen, the book moves through themes of healing, belonging, memory, loneliness and the little things that make us feel understood.</p>
-        <ul class="facts">
-          <li><span>Author</span><span>Saqeeb Aroofa</span></li>
-          <li><span>Year</span><span>2026</span></li>
-          <li><span>Listed</span><span>19 January 2026</span></li>
-          <li><span>Publisher</span><span>Notion Press (independently self-published)</span></li>
-          <li><span>Format</span><span>Paperback, 134 pages</span></li>
-          <li><span>Available</span><span>Amazon India</span></li>
-        </ul>
-        <a class="button" href="https://amzn.in/d/06tPB2tI">Find it on Amazon</a>
-      </div>
-    </div>
-  </div>
+  <article class="dept" id="unfinished-pages">
+    <div class="kicker">Desk 02</div>
+    <h2>The Unfinished Pages</h2>
+    <p>Words that refuse to behave, and are welcome anyway.</p>
+    <ul><li>Poetry and prose poetry</li><li>Letters</li><li>Microfiction</li><li>Creative experiments</li><li>Literary fragments</li></ul>
+    <div class="empty">NO PIECES YET. SOON.</div>
+  </article>
 </section>
+
+<section>
+  <article class="dept" id="bookish-bureau">
+    <div class="kicker">Desk 03</div>
+    <h2>The Bookish Bureau</h2>
+    <p>For people who buy books faster than they read them.</p>
+    <ul><li>Book reviews</li><li>Reading diaries</li><li>Literary discussions</li><li>Author features</li><li>Reading recommendations</li></ul>
+    <div class="empty">NO PIECES YET. SOON.</div>
+  </article>
+</section>
+
+<section>
+  <article class="dept" id="nonsense">
+    <div class="kicker">Desk 04</div>
+    <h2>The Nonsense Department</h2>
+    <p>Serious journalism about unserious things. Obviously.</p>
+    <ul><li>Humour and sarcastic writing</li><li>Random observations</li><li>Unpopular opinions</li><li>Ridiculous everyday experiences</li><li>The beautifully unnecessary aspects of life</li></ul>
+    <div class="empty">NO PIECES YET. SOON.</div>
+  </article>
+</section>
+
+<section>
+  <article class="dept" id="culture-desk">
+    <div class="kicker">Desk 05</div>
+    <h2>The Culture Desk</h2>
+    <p>Looking closely at how people live, speak and behave.</p>
+    <ul><li>Language</li><li>Society and culture</li><li>Traditions</li><li>Human behaviour</li><li>Contemporary cultural observations</li></ul>
+    <div class="empty">NO PIECES YET. SOON.</div>
+  </article>
+</section>
+
+<section>
+  <article class="dept" id="social-impact">
+    <div class="kicker">Desk 06</div>
+    <h2>The Social Impact Desk</h2>
+    <p>Reporting and human stories, with consent, care and checked facts. This is the editorial desk; our community work lives under The Ordinary Matters.</p>
+    <ul><li>Social issue reporting</li><li>Community stories</li><li>Interviews</li><li>Awareness features</li><li>Educational articles</li><li>Human-interest stories</li></ul>
+    <div class="empty">NO PIECES YET. SOON.</div>
+  </article>
+</section>
+
+<section class="matters">
+  <p class="note">not a desk, a programme</p>
+  <h2>The Ordinary Matters.</h2>
+  <p>The Social Impact Desk writes the stories. The Ordinary Matters connects them to practical action.</p>
+  <a class="button" href="ordinary-matters.html">See the initiative</a>
+</section>
+
+<p class="fn">* Footnote nobody asked for: “no pieces yet” is a promise, not a threat.</p>
 
 <footer>
   <div><b>The Absurd Ordinary</b></div>
@@ -196,4 +217,4 @@ footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display
 
 </div>
 </body>
-        </html>
+ </html>

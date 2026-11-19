@@ -6,8 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Archive | The Absurd Ordinary</title>
 <meta name="description" content="Every issue of The Absurd Ordinary, and a shelf from the editor.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+
 <style>
 :root {
   --paper: #f3ebdd;
@@ -17,8 +19,11 @@
   --rose: #d9a1ac;
   --olive: #899071;
 }
+
 * { box-sizing: border-box; }
+
 html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   background-color: var(--paper);
@@ -28,95 +33,286 @@ body {
   font: 17px/1.7 Lora, Georgia, serif;
   overflow-x: hidden;
 }
+
 a { color: inherit; text-decoration: none; }
-.wrap { max-width: 860px; margin: 0 auto; padding: 0 18px; }
-.type { font-family: 'Special Elite', 'Courier New', monospace; }
-.note { font-family: Caveat, cursive; font-weight: 700; color: var(--wine); font-size: 1.4rem; line-height: 1.1; }
-.kicker { font: 11px Inter, Arial, sans-serif; letter-spacing: 4px; text-transform: uppercase; color: var(--wine); }
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.type {
+  font-family: 'Special Elite', 'Courier New', monospace;
+}
+
+.note {
+  font-family: Caveat, cursive;
+  font-weight: 700;
+  color: var(--wine);
+  font-size: 1.4rem;
+  line-height: 1.1;
+}
+
+.kicker {
+  font: 11px Inter, Arial, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--wine);
+}
 
 .topline {
-  display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;
-  border-bottom: 2px solid var(--ink); padding: 10px 0 6px; font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--ink);
+  padding: 10px 0 6px;
+  font-size: 0.85rem;
 }
-.mast { text-align: center; padding: 26px 0 8px; position: relative; }
+
+.mast {
+  text-align: center;
+  padding: 26px 0 8px;
+  position: relative;
+}
+
 .mast h1 {
   margin: 10px 0 0;
   font: 900 clamp(2.4rem, 10vw, 5rem)/0.95 'Playfair Display', Georgia, serif;
   letter-spacing: -0.02em;
 }
+
 .mast h1 em { color: var(--wine); }
-.squig { display: block; margin: 8px auto 0; width: min(240px, 70%); color: var(--wine); }
-.tagline { font-style: italic; font-size: 1.15rem; margin: 10px 0 0; }
-.stamp-top {
-  position: absolute; right: 0; top: 10px; transform: rotate(9deg);
-  border: 3px double var(--wine); color: var(--wine); background: var(--paper);
-  padding: 6px 10px; border-radius: 6px; font-size: 0.75rem; line-height: 1.15; text-align: center;
+
+.squig {
+  display: block;
+  margin: 8px auto 0;
+  width: min(240px, 70%);
+  color: var(--wine);
 }
-@media (max-width: 520px) { .stamp-top { position: static; display: inline-block; margin-bottom: 10px; } }
+
+.tagline {
+  font-style: italic;
+  font-size: 1.15rem;
+  margin: 10px 0 0;
+}
+
+.stamp-top {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  transform: rotate(9deg);
+  border: 3px double var(--wine);
+  color: var(--wine);
+  background: var(--paper);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  line-height: 1.15;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .stamp-top {
+    position: static;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}
 
 nav {
-  border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink);
-  margin-top: 16px; padding: 4px 0;
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 22px;
-  font: 600 12px Inter, Arial, sans-serif; letter-spacing: 1.5px; text-transform: uppercase;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  margin-top: 16px;
+  padding: 4px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 22px;
+  font: 600 12px Inter, Arial, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
+
 nav a { padding: 11px 2px; }
-nav a:hover, nav a:focus-visible { color: var(--wine); text-decoration: underline wavy var(--rose); text-underline-offset: 6px; }
-nav a.here { color: var(--wine); text-decoration: underline; text-underline-offset: 6px; }
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--wine);
+  text-decoration: underline wavy var(--rose);
+  text-underline-offset: 6px;
+}
+
+nav a.here {
+  color: var(--wine);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
 
 section { margin: 42px 0; }
-h2 { font: 900 clamp(1.7rem, 6vw, 2.5rem)/1.1 'Playfair Display', Georgia, serif; margin: 8px 0 14px; }
-h3 { font: 700 1.5rem/1.15 'Playfair Display', serif; margin: 4px 0 8px; }
+
+h2 {
+  font: 900 clamp(1.7rem, 6vw, 2.5rem)/1.1 'Playfair Display', Georgia, serif;
+  margin: 8px 0 14px;
+}
+
+h3 {
+  font: 700 1.5rem/1.15 'Playfair Display', serif;
+  margin: 4px 0 8px;
+}
+
 .block {
-  background: var(--card); border: 1.5px solid var(--ink); padding: 22px;
-  box-shadow: 5px 5px 0 var(--rose); position: relative;
+  background: var(--card);
+  border: 1.5px solid var(--ink);
+  padding: 22px;
+  box-shadow: 5px 5px 0 var(--rose);
+  position: relative;
 }
+
 .block p { margin: 0 0 12px; }
+
 .block p:last-child { margin-bottom: 0; }
+
 .tape {
-  position: absolute; top: -13px; left: 50%; width: 110px; height: 28px;
-  background: #899071cc; transform: translateX(-50%) rotate(-5deg);
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  width: 110px;
+  height: 28px;
+  background: #899071cc;
+  transform: translateX(-50%) rotate(-5deg);
 }
 
-.issue { display: grid; gap: 18px; align-items: center; }
-@media (min-width: 620px) { .issue { grid-template-columns: auto 1fr; } }
+.issue {
+  display: grid;
+  gap: 18px;
+  align-items: center;
+}
+
+@media (min-width: 620px) {
+  .issue { grid-template-columns: auto 1fr; }
+}
+
 .num {
-  background: var(--wine); color: var(--paper); text-align: center;
-  padding: 22px 26px; transform: rotate(-2deg); box-shadow: 5px 5px 0 var(--ink);
+  background: var(--wine);
+  color: var(--paper);
+  text-align: center;
+  padding: 22px 26px;
+  transform: rotate(-2deg);
+  box-shadow: 5px 5px 0 var(--ink);
 }
-.num strong { display: block; font: 900 3.4rem/1 'Playfair Display', serif; }
-.num span { font: 11px Inter, Arial, sans-serif; letter-spacing: 3px; }
-.button {
-  display: inline-block; margin-top: 14px; padding: 12px 22px;
-  background: var(--wine); color: var(--paper); font: 600 12px Inter, Arial, sans-serif;
-  letter-spacing: 2px; text-transform: uppercase; box-shadow: 4px 4px 0 var(--rose);
-}
-.button:hover, .button:focus-visible { transform: translate(-2px, -2px); }
 
-.shelf { display: grid; gap: 24px; align-items: start; }
-@media (min-width: 620px) { .shelf { grid-template-columns: 190px 1fr; } }
-.book {
-  background: var(--wine); color: var(--paper); padding: 22px 16px;
-  min-height: 250px; display: flex; flex-direction: column; justify-content: space-between;
-  text-align: center; border: 3px double var(--rose); transform: rotate(-2.5deg);
-  box-shadow: 6px 6px 0 var(--ink); max-width: 210px; margin: 0 auto;
+.num strong {
+  display: block;
+  font: 900 3.4rem/1 'Playfair Display', serif;
 }
-.book b { font: italic 700 1.55rem/1.1 'Playfair Display', serif; }
-.book small { font: 10px Inter, Arial, sans-serif; letter-spacing: 3px; text-transform: uppercase; }
-.book .dot { color: var(--rose); }
-.facts { list-style: none; margin: 14px 0 0; padding: 0; font: 0.9rem/1.5 Inter, Arial, sans-serif; }
-.facts li { border-top: 1px dashed #30272566; padding: 8px 0; display: flex; justify-content: space-between; gap: 12px; }
-.facts li span:first-child { opacity: 0.7; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.72rem; }
+
+.num span {
+  font: 11px Inter, Arial, sans-serif;
+  letter-spacing: 3px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 22px;
+  background: var(--wine);
+  color: var(--paper);
+  font: 600 12px Inter, Arial, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 var(--rose);
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translate(-2px, -2px);
+}
+
+.shelf {
+  display: grid;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (min-width: 620px) {
+  .shelf { grid-template-columns: 190px 1fr; }
+}
+
+/* Actual book cover */
+
+.book-cover-wrap {
+  text-align: center;
+  max-width: 210px;
+  margin: 0 auto;
+}
+
+.book-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px double var(--rose);
+  box-shadow: 6px 6px 0 var(--ink);
+  transform: rotate(-2.5deg);
+  transition: transform 0.3s ease;
+}
+
+.book-cover:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+
+.book-cover-wrap .note {
+  margin-top: 20px;
+  font-size: 1.25rem;
+}
+
+.facts {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  font: 0.9rem/1.5 Inter, Arial, sans-serif;
+}
+
+.facts li {
+  border-top: 1px dashed #30272566;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.facts li span:first-child {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.72rem;
+}
+
 .facts li span:last-child { text-align: right; }
 
-.fn { font-size: 0.78rem; opacity: 0.85; }
-footer {
-  border-top: 3px double var(--ink); margin-top: 50px; padding: 24px 0 44px;
-  text-align: center; font-size: 0.9rem; line-height: 1.9;
+.fn {
+  font-size: 0.78rem;
+  opacity: 0.85;
 }
-footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display: block; }
+
+footer {
+  border-top: 3px double var(--ink);
+  margin-top: 50px;
+  padding: 24px 0 44px;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+footer small {
+  font: 10px Inter, Arial, sans-serif;
+  letter-spacing: 2px;
+  display: block;
+}
 </style>
 </head>
+
 <body>
 <div class="wrap">
 
@@ -129,8 +325,13 @@ footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display
 <header class="mast">
   <div class="stamp-top type">FILED<br>UNDER<br>★</div>
   <div class="kicker">The archive</div>
+
   <h1>Everything we’ve <em>printed.</em></h1>
-  <svg class="squig" viewBox="0 0 280 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M3 8c12-10 22 10 34 0s22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0"/></svg>
+
+  <svg class="squig" viewBox="0 0 280 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+    <path d="M3 8c12-10 22 10 34 0s22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0"/>
+  </svg>
+
   <p class="tagline">So far, that’s one issue. We’re working on it.</p>
 </header>
 
@@ -146,35 +347,54 @@ footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display
 <section>
   <div class="kicker">Issues</div>
   <h2>The weekly editions.</h2>
+
   <div class="block">
     <div class="tape"></div>
+
     <div class="issue">
-      <div class="num"><span>ISSUE NO.</span><strong>001</strong><span>NOVEMBER 2026</span></div>
+      <div class="num">
+        <span>ISSUE NO.</span>
+        <strong>001</strong>
+        <span>NOVEMBER 2026</span>
+      </div>
+
       <div>
         <h3>So, apparently, we started a newspaper.</h3>
+
         <p>The first edition: an editor’s note, and the start of the literary side and the conscience of the publication.</p>
+
         <a class="button" href="index.html">Read the issue</a>
       </div>
     </div>
   </div>
+
   <p class="fn">* Footnote nobody asked for: new issues will appear here, newest first.</p>
 </section>
 
 <section>
   <div class="kicker">From the editor’s shelf</div>
   <h2>A book that came first.</h2>
+
   <div class="block">
     <div class="shelf">
-      <div class="book">
-        <small>Prose poetry</small>
-        <b>Maps for the Unnamed</b>
-        <small>Saqeeb Aroofa <span class="dot">★</span></small>
+
+      <div class="book-cover-wrap">
+        <img
+          src="images/maps-for-the-unnamed.jpg"
+          alt="Book cover of Maps for the Unnamed by Saqeeb Aroofa"
+          class="book-cover"
+        >
+        <p class="note">a little book that found its way here ♡</p>
       </div>
+
       <div>
         <div class="kicker">Published work</div>
         <h3>Maps for the Unnamed</h3>
+
         <p>Maps for the Unnamed is a collection of 60 prose-poetry pieces exploring unnamed feelings, quiet struggles, unspoken thoughts and the complicated landscapes of being human. It gives language to emotions that often remain unexplained, offering readers a place to recognise themselves in words they may never have known how to express.</p>
+
         <p>Written and completed at seventeen, the book moves through themes of healing, belonging, memory, loneliness and the little things that make us feel understood.</p>
+
         <ul class="facts">
           <li><span>Author</span><span>Saqeeb Aroofa</span></li>
           <li><span>Year</span><span>2026</span></li>
@@ -183,8 +403,10 @@ footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display
           <li><span>Format</span><span>Paperback, 134 pages</span></li>
           <li><span>Available</span><span>Amazon India</span></li>
         </ul>
+
         <a class="button" href="https://amzn.in/d/06tPB2tI">Find it on Amazon</a>
       </div>
+
     </div>
   </div>
 </section>
@@ -198,3 +420,4 @@ footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display
 </div>
 </body>
   </html>
+  

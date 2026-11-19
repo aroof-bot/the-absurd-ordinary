@@ -2,122 +2,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Ordinary Matters | The Absurd Ordinary</title>
-  <meta name="description" content="A space for stories, awareness, overlooked voices and meaningful action.">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ordinary Matters | The Absurd Ordinary</title>
+<meta name="description" content="The Ordinary Matters: the social-impact initiative of The Absurd Ordinary. Words, awareness, action and accountability.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f3ebdd;
+  --card: #fbf6ec;
+  --ink: #302725;
+  --wine: #792d40;
+  --rose: #d9a1ac;
+  --olive: #899071;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background-color: var(--paper);
+  background-image: radial-gradient(#30272522 0.7px, transparent 0.8px);
+  background-size: 6px 6px;
+  color: var(--ink);
+  font: 17px/1.7 Lora, Georgia, serif;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 18px; }
+.type { font-family: 'Special Elite', 'Courier New', monospace; }
+.note { font-family: Caveat, cursive; font-weight: 700; color: var(--wine); font-size: 1.4rem; line-height: 1.1; }
+.kicker { font: 11px Inter, Arial, sans-serif; letter-spacing: 4px; text-transform: uppercase; color: var(--wine); }
+
+.topline {
+  display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  border-bottom: 2px solid var(--ink); padding: 10px 0 6px; font-size: 0.85rem;
+}
+.mast { text-align: center; padding: 26px 0 8px; position: relative; }
+.mast h1 {
+  margin: 10px 0 0;
+  font: 900 clamp(2.4rem, 10vw, 5rem)/0.95 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.02em;
+}
+.mast h1 em { color: var(--wine); }
+.squig { display: block; margin: 8px auto 0; width: min(240px, 70%); color: var(--wine); }
+.tagline { font-style: italic; font-size: 1.15rem; margin: 10px 0 0; }
+.stamp-top {
+  position: absolute; right: 0; top: 10px; transform: rotate(9deg);
+  border: 3px double var(--wine); color: var(--wine); background: var(--paper);
+  padding: 6px 10px; border-radius: 6px; font-size: 0.75rem; line-height: 1.15; text-align: center;
+}
+@media (max-width: 520px) { .stamp-top { position: static; display: inline-block; margin-bottom: 10px; } }
+
+nav {
+  border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink);
+  margin-top: 16px; padding: 4px 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 22px;
+  font: 600 12px Inter, Arial, sans-serif; letter-spacing: 1.5px; text-transform: uppercase;
+}
+nav a { padding: 11px 2px; }
+nav a:hover, nav a:focus-visible { color: var(--wine); text-decoration: underline wavy var(--rose); text-underline-offset: 6px; }
+nav a.here { color: var(--wine); text-decoration: underline; text-underline-offset: 6px; }
+
+section { margin: 42px 0; }
+h2 { font: 900 clamp(1.7rem, 6vw, 2.5rem)/1.1 'Playfair Display', Georgia, serif; margin: 8px 0 14px; }
+h3 { font: 700 1.3rem/1.2 'Playfair Display', serif; margin: 4px 0 6px; }
+.block {
+  background: var(--card); border: 1.5px solid var(--ink); padding: 22px;
+  box-shadow: 5px 5px 0 var(--rose); position: relative;
+}
+.block p { margin: 0 0 12px; }
+.block p:last-child { margin-bottom: 0; }
+.tape {
+  position: absolute; top: -13px; left: 50%; width: 110px; height: 28px;
+  background: #899071cc; transform: translateX(-50%) rotate(-5deg);
+}
+
+/* four steps */
+.steps { display: grid; gap: 14px; }
+@media (min-width: 640px) { .steps { grid-template-columns: 1fr 1fr; } }
+.step { background: var(--card); border: 1.5px solid var(--ink); padding: 18px; }
+.step:nth-child(odd) { transform: rotate(-0.5deg); box-shadow: 4px 4px 0 var(--rose); }
+.step:nth-child(even) { transform: rotate(0.5deg); box-shadow: 4px 4px 0 var(--olive); }
+.step .n { font: 900 2.4rem/1 'Playfair Display', serif; color: var(--wine); }
+.step b { font: 600 11px Inter, Arial, sans-serif; letter-spacing: 3px; text-transform: uppercase; display: block; margin: 4px 0; }
+.step p { margin: 0; font-size: 0.95rem; }
+
+/* programmes */
+.progs { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+@media (min-width: 640px) { .progs { grid-template-columns: 1fr 1fr; } }
+.progs li {
+  background: var(--card); border-left: 9px solid var(--olive); padding: 14px 16px;
+}
+.progs li:nth-child(3n+2) { border-color: var(--rose); }
+.progs li:nth-child(3n) { border-color: var(--wine); }
+.progs .num { font: 12px 'Special Elite', monospace; color: var(--wine); }
+.progs b { display: block; font: 700 1.15rem 'Playfair Display', serif; }
+.progs small { font: 0.88rem/1.5 Inter, Arial, sans-serif; opacity: 0.9; display: block; margin-top: 4px; }
+
+/* status board */
+.board { display: grid; gap: 12px; }
+@media (min-width: 640px) { .board { grid-template-columns: 1fr 1fr; } }
+.slot { border: 2px dashed var(--ink); background: var(--card); padding: 16px; }
+.slot .type { color: var(--wine); font-size: 0.85rem; }
+.slot p { margin: 6px 0 0; font-size: 0.95rem; }
+
+/* principles */
+.rules { margin: 10px 0 0; padding-left: 22px; font: 0.95rem/1.75 Inter, Arial, sans-serif; }
+
+.matters {
+  background: var(--wine); color: var(--paper); text-align: center;
+  padding: 56px 22px 40px; margin: 56px 0;
+  clip-path: polygon(0 3%, 4% 0, 9% 3%, 15% 0, 22% 2%, 30% 0, 38% 3%, 47% 0, 55% 2%, 64% 0, 72% 3%, 81% 0, 90% 2%, 100% 0, 100% 100%, 0 100%);
+}
+.matters h2 { color: var(--paper); }
+.matters .note { color: var(--rose); }
+.matters p { max-width: 560px; margin: 8px auto; }
+.button {
+  display: inline-block; margin-top: 14px; padding: 12px 22px;
+  background: var(--paper); color: var(--wine); font: 600 12px Inter, Arial, sans-serif;
+  letter-spacing: 2px; text-transform: uppercase; box-shadow: 4px 4px 0 var(--rose);
+}
+.button:hover, .button:focus-visible { transform: translate(-2px, -2px); }
+.fn { font-size: 0.78rem; opacity: 0.85; }
+
+footer {
+  border-top: 3px double var(--ink); margin-top: 50px; padding: 24px 0 44px;
+  text-align: center; font-size: 0.9rem; line-height: 1.9;
+}
+footer small { font: 10px Inter, Arial, sans-serif; letter-spacing: 2px; display: block; }
+</style>
 </head>
 <body>
+<div class="wrap">
 
-<header>
+<div class="topline type">
+  <span>Issue No. 001</span>
+  <span>The conscience of the paper</span>
+  <span>Weekly, allegedly</span>
+</div>
+
+<header class="mast">
+  <div class="stamp-top type">MEANT<br>SERIOUSLY<br>★</div>
   <div class="kicker">Beyond the written word</div>
-  <h1>The Ordinary<br>Matters.</h1>
-  <p class="tagline">Because some things should never be ordinary enough to ignore.</p>
+  <h1>The Ordinary <em>Matters.</em></h1>
+  <svg class="squig" viewBox="0 0 280 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M3 8c12-10 22 10 34 0s22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0"/></svg>
+  <p class="tagline">Some stories deserve more than a passing glance.</p>
 </header>
 
 <nav>
-  <button class="menu-toggle" aria-label="Toggle navigation">
-  ☰
-</button>
-
-<nav class="nav-links">
   <a href="index.html">Home</a>
   <a href="archive.html">Archive</a>
-  <a href="departments.html">Departments</a>
-  <a href="ordinary-matters.html">Our Initiative</a>
+  <a href="department.html">Departments</a>
+  <a class="here" href="ordinary-matters.html">Our Initiative</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
 </nav>
 
-<main>
+<section>
+  <div class="block">
+    <div class="tape"></div>
+    <div class="kicker">Our mission</div>
+    <h2>Literature first. Humanity always.</h2>
+    <p>The Ordinary Matters is the social-impact initiative of The Absurd Ordinary. It connects storytelling, awareness and practical action, so that some of what we write can turn into something that helps.</p>
+    <p>We don’t promise to solve every problem. We aim to make a meaningful contribution within our capacity, and to tell you honestly what we did and what happened.</p>
+  </div>
+</section>
 
-  <div class="kicker">A SOCIAL-IMPACT INITIATIVE</div>
+<section>
+  <div class="kicker">How it works</div>
+  <h2>Four steps, in this order.</h2>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><b>Words</b><p>We publish a story or article that gives an overlooked experience a voice.</p></div>
+    <div class="step"><div class="n">2</div><b>Awareness</b><p>We share research, interviews and experiences that help readers understand the issue.</p></div>
+    <div class="step"><div class="n">3</div><b>Action</b><p>Where we can, we work with a verified organisation on something practical, such as a book collection or reading initiative.</p></div>
+    <div class="step"><div class="n">4</div><b>Accountability</b><p>We publish an honest report on what was collected, where it went and what was achieved.</p></div>
+  </div>
+</section>
 
-  <section>
-    <h2 class="section-heading">Not everything ends with a full stop.</h2>
-    <p>
-      Some stories ask us to pause. Some ask us to question what we have
-      always accepted. And some ask us to do something about what we have
-      finally noticed.
-    </p>
-    <p>
-      The Ordinary Matters is an initiative by The Absurd Ordinary that
-      brings together storytelling, social awareness and meaningful action.
-    </p>
-  </section>
+<section>
+  <div class="kicker">Long-term areas of interest</div>
+  <h2>Five programmes.</h2>
+  <ul class="progs">
+    <li><span class="num">01</span><b>Pages for Everyone</b><small>Literacy, access to books, reading programmes and educational opportunities.</small></li>
+    <li><span class="num">02</span><b>Voices Unheard</b><small>Stories of people and communities that deserve greater representation.</small></li>
+    <li><span class="num">03</span><b>The Conversation Project</b><small>Responsible conversations about mental health, stigma, loneliness, social pressure and emotional wellbeing.</small></li>
+    <li><span class="num">04</span><b>Roots &amp; Words</b><small>Language, regional literature, cultural memory, translations and overlooked literary traditions.</small></li>
+    <li><span class="num">05</span><b>Small Acts, Real Change</b><small>Practical community action around education, accessibility, environmental responsibility and social inequality.</small></li>
+  </ul>
+  <p class="fn">* Footnote nobody asked for: these are areas we care about, not five projects launching at once.</p>
+</section>
 
-  <section class="ordinary-matters">
-    <h2>Words. Awareness. Action.</h2>
-    <p>
-      We believe words can open doors, awareness can challenge silence
-      and collective action can create possibilities.
-      This is our attempt to bring all three into the same conversation.
-    </p>
-  </section>
+<section>
+  <div class="kicker">Where things stand</div>
+  <h2>The honest status board.</h2>
+  <div class="board">
+    <div class="slot"><div class="type">CURRENT INITIATIVES</div><p>None yet. We’d rather start one well than announce five badly.</p></div>
+    <div class="slot"><div class="type">UPCOMING COLLABORATIONS</div><p>None announced. We’ll name an organisation only after we’ve checked it.</p></div>
+    <div class="slot"><div class="type">VERIFIED OPPORTUNITIES</div><p>None listed yet. Anything we share will be checked first.</p></div>
+    <div class="slot"><div class="type">IMPACT REPORTS</div><p>Nothing to report yet, and we won’t pretend otherwise.</p></div>
+  </div>
+</section>
 
-  <section>
-    <div class="kicker">01 — STORIES</div>
-    <h2 class="section-heading">Making room for overlooked voices.</h2>
-    <p>
-      We want to explore experiences that are often ignored, misunderstood
-      or left outside mainstream conversations. Every human experience
-      deserves to be approached with dignity and curiosity.
-    </p>
-  </section>
+<section>
+  <div class="block">
+    <div class="kicker">Our promises</div>
+    <h2>The rules we hold ourselves to.</h2>
+    <ol class="rules">
+      <li>Informed consent before publishing personal stories, photographs or interviews.</li>
+      <li>Identities protected wherever disclosure could create risk.</li>
+      <li>Social and political claims fact-checked.</li>
+      <li>Reporting, opinion and creative writing clearly distinguished.</li>
+      <li>No sensationalising poverty, trauma or suffering.</li>
+      <li>No promising help or outcomes we can’t deliver.</li>
+      <li>Organisations verified before we recommend or partner with them.</li>
+      <li>Donations and expenses kept transparent.</li>
+      <li>No collecting sensitive information unnecessarily.</li>
+      <li>Factual mistakes corrected openly.</li>
+      <li>Meaningful action over performative activism.</li>
+    </ol>
+    <p style="margin-top:14px"><b>What we are:</b> an independent publication and community initiative. We are not a registered NGO or charity.</p>
+  </div>
+</section>
 
-  <section>
-    <div class="kicker">02 — AWARENESS</div>
-    <h2 class="section-heading">Looking beyond what we already know.</h2>
-    <p>
-      Through thoughtful articles, discussions and educational content,
-      we hope to encourage readers to question assumptions,
-      understand different experiences and engage with the world more consciously.
-    </p>
-  </section>
-
-  <section>
-    <div class="kicker">03 — ACTION</div>
-    <h2 class="section-heading">Let understanding become participation.</h2>
-    <p>
-      Awareness should not have to remain a spectator sport.
-      As the initiative grows, we hope to explore responsible collaborations,
-      community participation and practical ways to support meaningful causes.
-    </p>
-  </section>
-
-  <section>
-    <div class="kicker">04 — OUR PROMISE</div>
-    <h2 class="section-heading">Humanity before headlines.</h2>
-    <p>
-      We aim to approach every subject with empathy, responsibility
-      and respect. We do not want to turn people's struggles into
-      spectacles or use important causes as decoration.
-    </p>
-    <p>
-      We are still growing, learning and figuring things out.
-      But the intention is simple: to make room for conversations
-      that matter and actions that mean something.
-    </p>
-  </section>
-
-  <section class="ordinary-matters">
-    <h2>Something matters because someone does.</h2>
-    <p>
-      This is only the beginning. If there is a story, perspective
-      or cause you believe deserves thoughtful attention,
-      we would love to hear about it.
-    </p>
-    <p><a href="contact.html">Get in touch →</a></p>
-  </section>
-
-</main>
+<section class="matters">
+  <p class="note">want to take part?</p>
+  <h2>Write to us.</h2>
+  <p>Share a story (with care for the people in it), suggest an issue worth covering, or tell us about an organisation doing good work.</p>
+  <a class="button" href="contact.html">Get in touch</a>
+</section>
 
 <footer>
-  <p>The Absurd Ordinary</p>
-  <p class="signature">Founded by Saqeeb Aroofa · 2026</p>
+  <div><b>The Absurd Ordinary</b></div>
+  <small>ORDINARY LIFE. UNORDINARY OBSERVATIONS.</small>
+  <small>FOUNDED BY SAQEEB AROOFA · 2026</small>
 </footer>
-<script src="js/script.js"></script>
-</body>
-</html>
 
+</div>
+</body>
+                        </html>

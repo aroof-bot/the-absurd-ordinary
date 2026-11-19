@@ -1,68 +1,458 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | The Absurd Ordinary</title>
-<meta name="description" content="The story, philosophy and people behind The Absurd Ordinary.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Special+Elite&display=swap" rel="stylesheet">
-<style>
-:root {
-  --paper: #f3ebdd;
-  --card: #fbf6ec;
-  --ink: #302725;
-  --wine: #792d40;
-  --rose: #d9a1ac;
-  --olive: #899071;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background-color: var(--paper);
-  background-image: radial-gradient(#30272522 0.7px, transparent 0.8px);
-  background-size: 6px 6px;
-  color: var(--ink);
-  font: 17px/1.7 Lora, Georgia, serif;
-  overflow-x: hidden;
-}
-a { color: inherit; text-decoration: none; }
-.wrap { max-width: 860px; margin: 0 auto; padding: 0 18px; }
-.type { font-family: 'Special Elite', 'Courier New', monospace; }
-.note { font-family: Caveat, cursive; font-weight: 700; color: var(--wine); font-size: 1.4rem; line-height: 1.1; }
-.kicker { font: 11px Inter, Arial, sans-serif; letter-spacing: 4px; text-transform: uppercase; color: var(--wine); }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.topline {
-  display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;
-  border-bottom: 2px solid var(--ink); padding: 10px 0 6px; font-size: 0.85rem;
-}
-.mast { text-align: center; padding: 26px 0 8px; position: relative; }
-.mast h1 {
-  margin: 10px 0 0;
-  font: 900 clamp(2.4rem, 10vw, 5rem)/0.95 'Playfair Display', Georgia, serif;
-  letter-spacing: -0.02em;
-}
-.mast h1 em { color: var(--wine); }
-.squig { display: block; margin: 8px auto 0; width: min(240px, 70%); color: var(--wine); }
-.tagline { font-style: italic; font-size: 1.15rem; margin: 10px 0 0; }
-.stamp-top {
-  position: absolute; right: 0; top: 10px; transform: rotate(9deg);
-  border: 3px double var(--wine); color: var(--wine); background: var(--paper);
-  padding: 6px 10px; border-radius: 6px; font-size: 0.75rem; line-height: 1.15; text-align: center;
-}
-@media (max-width: 520px) { .stamp-top { position: static; display: inline-block; margin-bottom: 10px; } }
+  <title>About | The Absurd Ordinary</title>
+  <meta name="description" content="The story, philosophy and people behind The Absurd Ordinary.">
 
-nav {
-  border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink);
-  margin-top: 16px; padding: 4px 0;
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 22px;
-  font: 600 12px Inter, Arial, sans-serif; letter-spacing: 1.5px; text-transform: uppercase;
-}
-nav a { padding: 11px 2px; }
-nav a:hover, nav a:focus-visible { color: var(--wine); text-decoration: underline wavy var(--rose); text-underline-offset: 6px; }
-nav a.here { color: var(--wine); text-decoration: underline; text-underline-offset: 6px; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-section { margin: 42px 0; }
-h2 { font: 900 clamp(1.7rem, 6vw, 2.5rem)/1.1 'Playfair
-    
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #f3ebdd;
+      --card: #fbf6ec;
+      --ink: #302725;
+      --wine: #792d40;
+      --rose: #d9a1ac;
+      --olive: #899071;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--paper);
+      background-image: radial-gradient(#30272522 0.7px, transparent 0.8px);
+      background-size: 6px 6px;
+      color: var(--ink);
+      font: 17px/1.7 Lora, Georgia, serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    .type {
+      font-family: 'Special Elite', 'Courier New', monospace;
+    }
+
+    .note {
+      font-family: Caveat, cursive;
+      font-weight: 700;
+      color: var(--wine);
+      font-size: 1.4rem;
+      line-height: 1.1;
+    }
+
+    .kicker {
+      font: 11px Inter, Arial, sans-serif;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--wine);
+    }
+
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      border-bottom: 2px solid var(--ink);
+      padding: 10px 0 6px;
+      font-size: 0.85rem;
+    }
+
+    .mast {
+      text-align: center;
+      padding: 26px 0 8px;
+      position: relative;
+    }
+
+    .mast h1 {
+      margin: 10px 0 0;
+      font: 900 clamp(2.4rem, 10vw, 5rem)/0.95 'Playfair Display', Georgia, serif;
+      letter-spacing: -0.02em;
+    }
+
+    .mast h1 em {
+      color: var(--wine);
+    }
+
+    .squig {
+      display: block;
+      margin: 8px auto 0;
+      width: min(240px, 70%);
+      color: var(--wine);
+    }
+
+    .tagline {
+      font-style: italic;
+      font-size: 1.15rem;
+      margin: 10px 0 0;
+    }
+
+    .stamp-top {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      transform: rotate(9deg);
+      border: 3px double var(--wine);
+      color: var(--wine);
+      background: var(--paper);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      line-height: 1.15;
+      text-align: center;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .nav-links {
+      border-top: 2px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      margin-top: 16px;
+      padding: 4px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px 22px;
+      font: 600 12px Inter, Arial, sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      padding: 11px 2px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--wine);
+      text-decoration: underline wavy var(--rose);
+      text-underline-offset: 6px;
+    }
+
+    .nav-links a.here {
+      color: var(--wine);
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+    section {
+      margin: 42px 0;
+    }
+
+    h2 {
+      font: 900 clamp(1.7rem, 6vw, 2.5rem)/1.1 'Playfair Display', Georgia, serif;
+      margin: 8px 0 14px;
+    }
+
+    .block {
+      background: var(--card);
+      border: 1.5px solid var(--ink);
+      padding: 22px;
+      box-shadow: 5px 5px 0 var(--rose);
+    }
+
+    section:nth-of-type(even) .block {
+      transform: rotate(0.4deg);
+      box-shadow: 5px 5px 0 var(--olive);
+    }
+
+    section:nth-of-type(odd) .block {
+      transform: rotate(-0.4deg);
+    }
+
+    .block p {
+      margin: 0 0 12px;
+    }
+
+    .block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .founder {
+      position: relative;
+    }
+
+    .tape {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      width: 110px;
+      height: 28px;
+      background: #899071cc;
+      transform: translateX(-50%) rotate(-5deg);
+    }
+
+    .matters {
+      background: var(--wine);
+      color: var(--paper);
+      text-align: center;
+      padding: 56px 22px 40px;
+      margin: 56px 0;
+      clip-path: polygon(0 3%, 4% 0, 9% 3%, 15% 0, 22% 2%, 30% 0, 38% 3%, 47% 0, 55% 2%, 64% 0, 72% 3%, 81% 0, 90% 2%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .matters h2 {
+      color: var(--paper);
+    }
+
+    .matters .note {
+      color: var(--rose);
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 12px 22px;
+      background: var(--paper);
+      color: var(--wine);
+      font: 600 12px Inter, Arial, sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 4px 4px 0 var(--rose);
+      transition: transform 0.2s ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translate(-2px, -2px);
+    }
+
+    .fn {
+      font-size: 0.78rem;
+      opacity: 0.85;
+    }
+
+    footer {
+      border-top: 3px double var(--ink);
+      margin-top: 50px;
+      padding: 24px 0 44px;
+      text-align: center;
+      font-size: 0.9rem;
+      line-height: 1.9;
+    }
+
+    footer small {
+      font: 10px Inter, Arial, sans-serif;
+      letter-spacing: 2px;
+      display: block;
+    }
+
+    @media (max-width: 520px) {
+      .stamp-top {
+        position: static;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      .menu-toggle {
+        display: block;
+        margin: 14px auto;
+        padding: 9px 18px;
+        background: transparent;
+        border: 1px solid var(--ink);
+        color: var(--wine);
+        font-size: 23px;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        border-bottom: 1px solid var(--ink);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px;
+      }
+
+      .block {
+        padding: 19px;
+      }
+
+      .topline {
+        font-size: 0.72rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <div class="topline type">
+    <span>Issue No. 001</span>
+    <span>About the paper</span>
+    <span>Weekly, allegedly</span>
+  </div>
+
+  <header class="mast">
+
+    <div class="stamp-top type">
+      READ THE<br>FINE PRINT<br>★
+    </div>
+
+    <div class="kicker">A little introduction</div>
+
+    <h1>
+      The story<br>
+      behind <em>the paper.</em>
+    </h1>
+
+    <svg class="squig" viewBox="0 0 280 14"
+      fill="none" stroke="currentColor"
+      stroke-width="3" stroke-linecap="round"
+      aria-hidden="true">
+      <path d="M3 8c12-10 22 10 34 0s22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0 22 10 34 0"/>
+    </svg>
+
+    <p class="tagline">
+      Because apparently, ordinary needed a closer look.
+    </p>
+
+    <button class="menu-toggle"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-expanded="false">
+      ☰
+    </button>
+
+  </header>
+
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="departments.html">Departments</a>
+    <a href="ordinary-matters.html">Our Initiative</a>
+    <a class="here" href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+
+    <section>
+      <div class="block">
+        <div class="kicker">01 — Why we exist</div>
+        <h2>Not quite a newspaper. Not quite a rebellion.</h2>
+        <p>
+          The Absurd Ordinary is an independent literary and
+          cultural publication interested in the things we
+          overlook, the questions we avoid, the stories we carry
+          and the wonderfully ridiculous business of being human.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="block">
+        <div class="kicker">02 — Our philosophy</div>
+        <h2>Take words seriously. Take ourselves lightly.</h2>
+        <p>
+          We believe literature belongs everywhere. In conversations,
+          in uncomfortable questions, in everyday observations and
+          in the stories that rarely find a place to be heard.
+        </p>
+        <p>
+          We make room for humour, reflection, culture, criticism,
+          imagination and the occasional unnecessary investigation.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="block">
+        <div class="kicker">03 — Beyond the page</div>
+        <h2>Words should occasionally leave the paper.</h2>
+        <p>
+          Through The Ordinary Matters, we hope to connect storytelling
+          with awareness, social understanding and meaningful action.
+          Because some things deserve more than being read and forgotten.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="block founder">
+        <div class="tape"></div>
+        <div class="kicker">04 — The person behind it</div>
+        <h2>An unreasonable curiosity about everything.</h2>
+        <p>
+          Founded by Saqeeb Aroofa, a writer who believes that
+          ordinary life is rarely as ordinary as it pretends to be.
+        </p>
+        <span class="note">
+          (she wrote this about herself in the third person. she knows.)
+        </span>
+      </div>
+    </section>
+
+    <section class="matters">
+      <p class="note">welcome</p>
+      <h2>Welcome to our little corner of the absurd.</h2>
+      <p>
+        Read something. Question something. Laugh at something.
+        And, if you can, make something matter.
+      </p>
+      <a class="button" href="contact.html">Write to us</a>
+    </section>
+
+    <p class="fn">
+      * Footnote nobody asked for: writing to us doesn’t guarantee
+      publication, but it does guarantee we’ll read it.
+    </p>
+
+  </main>
+
+  <footer>
+    <div><b>The Absurd Ordinary</b></div>
+    <small>ORDINARY LIFE. UNORDINARY OBSERVATIONS.</small>
+    <small>FOUNDED BY SAQEEB AROOFA · 2026</small>
+  </footer>
+
+</div>
+
+<script>
+  const menuButton = document.querySelector('.menu-toggle');
+  const navigation = document.querySelector('.nav-links');
+
+  menuButton.addEventListener('click', function () {
+    const isOpen = navigation.classList.toggle('active');
+    menuButton.setAttribute('aria-expanded', isOpen);
+    menuButton.textContent = isOpen ? '×' : '☰';
+  });
+</script>
+
+</body>
+        </html>
+        

@@ -123,7 +123,7 @@ h2 {
 }
 .margin { display: block; margin-top: 14px; }
 
-/* featured first issue */
+/* featured issue */
 .featured-issue {
   position: relative;
   background: var(--card);
@@ -133,7 +133,7 @@ h2 {
   overflow: hidden;
 }
 .featured-issue::after {
-  content: "001";
+  content: "002";
   position: absolute;
   right: 12px;
   bottom: -36px;
@@ -160,9 +160,7 @@ h2 {
   font-style: italic;
   font-size: 1.1rem;
 }
-.featured-issue p {
-  max-width: 650px;
-}
+.featured-issue p { max-width: 650px; }
 .issue-meta {
   font: 11px Inter, Arial, sans-serif;
   letter-spacing: 2px;
@@ -186,6 +184,32 @@ h2 {
 .issue-button:hover,
 .issue-button:focus-visible {
   transform: translate(-3px, -3px);
+}
+
+/* previous issue */
+.previous-issue {
+  margin-top: 28px;
+  padding: 20px 22px;
+  background: var(--card);
+  border: 1.5px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--rose);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.previous-issue h3 {
+  font: 700 1.35rem/1.2 'Playfair Display', Georgia, serif;
+  margin: 5px 0;
+}
+.previous-issue p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+.previous-issue .issue-button {
+  margin-top: 0;
+  white-space: nowrap;
 }
 
 /* story cards */
@@ -311,7 +335,7 @@ footer small {
 <div class="wrap">
 
 <div class="topline type">
-  <span>Issue No. 001</span>
+  <span>Issue No. 002</span>
   <span>November 2026</span>
   <span>Weekly, allegedly</span>
 </div>
@@ -346,21 +370,35 @@ footer small {
 
   <div class="stamp">
     <div class="tape"></div>
-    <span>THE FIRST EDITION</span>
-    <strong>001</strong>
+    <span>THE SECOND EDITION</span>
+    <strong>002</strong>
     <span>WORDS WITH A PURPOSE</span>
   </div>
 </section>
 
-<!-- FEATURED FIRST ISSUE -->
+<!-- FEATURED SECOND ISSUE -->
 <section class="featured-issue">
-  <div class="issue-label">THE FIRST ISSUE · NOVEMBER 2026</div>
+  <div class="issue-label">THE SECOND ISSUE · NOVEMBER 2026</div>
   <div class="kicker">Fresh from the printing press</div>
-  <h2>So, apparently, we started a newspaper.</h2>
-  <p class="issue-subtitle">The ordinary begins here.</p>
-  <p>Our first edition is here. A note from the editor, a little reflection on the art of being ordinary, and the beginning of something we've been meaning to put into the world.</p>
-  <div class="issue-meta">Issue No. 001 · Written by Saqeeb Aroofa</div>
-  <a class="issue-button" href="issue-001.html">Read Issue 001</a>
+  <h2>People Are More Than Their First Impressions</h2>
+  <p class="issue-subtitle">We meet someone once and somehow leave with a whole story about them.</p>
+  <p>We make assumptions about people before we've really had the chance to know them. A reflection on first impressions, human complexity and the stories we invent about one another.</p>
+  <div class="issue-meta">Issue No. 002 · Written by Saqeeb Aroofa</div>
+  <a class="issue-button" href="issue-002.html">Read Issue 002</a>
+</section>
+
+<!-- PREVIOUS ISSUE -->
+<section>
+  <div class="kicker">Previously on the printing press</div>
+  <div class="previous-issue">
+    <div>
+      <div class="issue-label">ISSUE 001 · NOVEMBER 2026</div>
+      <h3>So, apparently, we started a newspaper.</h3>
+      <p>The debut edition: an editor’s note and a reflection on the art of being ordinary.</p>
+    </div>
+    <a class="issue-button" href="issue-001.html">Read Issue 001</a>
+  </div>
+  <p class="fn">* Missed an edition? The complete back catalogue lives in the <a href="archive.html" style="color:var(--wine);text-decoration:underline;">archive</a>.</p>
 </section>
 
 <section>
@@ -429,5 +467,4 @@ footer small {
 
 </div>
 </body>
-      </html>
-      
+</html>

@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Issue 002 | The Absurd Ordinary</title>
+<meta name="description" content="Issue 002 of The Absurd Ordinary, featuring People Are More Than Their First Impressions by Saqeeb Aroofa.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper: #f3ebdd;
+  --card: #fbf6ec;
+  --ink: #302725;
+  --wine: #792d40;
+  --rose: #d9a1ac;
+  --olive: #899071;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  background-image: radial-gradient(#30272522 0.7px, transparent 0.8px);
+  background-size: 6px 6px;
+  color: var(--ink);
+  font: 17px/1.85 Lora, Georgia, serif;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.type {
+  font-family: 'Special Elite', 'Courier New', monospace;
+}
+
+.note {
+  font-family: Caveat, cursive;
+  font-weight: 700;
+  color: var(--wine);
+}
+
+.kicker {
+  font: 11px Inter, Arial, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--wine);
+}
+
+.topline {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 2px solid var(--ink);
+  padding: 10px 0 6px;
+  font-size: 0.85rem;
+}
+
+.mast {
+  text-align: center;
+  padding: 34px 0 24px;
+}
+
+.mast h1 {
+  font: 900 clamp(2.5rem, 10vw, 5rem)/0.98 'Playfair Display', Georgia, serif;
+  margin: 12px 0;
+}
+
+.mast h1 em { color: var(--wine); }
+
+.tagline {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.stamp {
+  display: inline-block;
+  border: 3px double var(--wine);
+  color: var(--wine);
+  padding: 7px 14px;
+  transform: rotate(-4deg);
+  font: 12px 'Special Elite', monospace;
+  margin: 12px 0;
+}
+
+nav {
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 22px;
+  font: 600 12px Inter, Arial, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+nav a { padding: 12px 2px; }
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--wine);
+  text-decoration: underline;
+}
+
+section { margin: 48px 0; }
+
+h2 {
+  font: 900 clamp(2rem, 7vw, 3rem)/1.15 'Playfair Display', Georgia, serif;
+  margin: 10px 0 6px;
+}
+
+.block {
+  background: var(--card);
+  border: 1.5px solid var(--ink);
+  padding: clamp(20px, 5vw, 38px);
+  box-shadow: 5px 5px 0 var(--rose);
+  position: relative;
+}
+
+.block p { margin: 0 0 22px; }
+
+.block p:last-child { margin-bottom: 0; }
+
+.author {
+  font: 600 12px Inter, Arial, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--wine);
+  margin: 16px 0 26px;
+}
+
+.article {
+  font-size: 1.04rem;
+}
+
+.section-divider {
+  text-align: center;
+  margin: 48px 0;
+  color: var(--wine);
+  font-size: 1.5rem;
+  letter-spacing: 10px;
+}
+
+.pullquote {
+  border-left: 4px solid var(--rose);
+  padding: 8px 0 8px 20px;
+  margin: 32px 0;
+  color: var(--wine);
+  font: italic 1.3rem/1.6 'Playfair Display', Georgia, serif;
+}
+
+.end-note {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.end-note .note {
+  font-size: 1.8rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 22px;
+  background: var(--wine);
+  color: var(--paper);
+  font: 600 12px Inter, Arial, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 var(--rose);
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translate(-2px, -2px);
+}
+
+footer {
+  border-top: 3px double var(--ink);
+  margin-top: 55px;
+  padding: 26px 0 42px;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+footer small {
+  display: block;
+  font: 10px Inter, Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  .topline { font-size: 0.75rem; }
+  nav { gap: 2px 14px; }
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<div class="topline type">
+  <span>Issue No. 002</span>
+  <span>November 2026</span>
+  <span>The second edition</span>
+</div>
+
+<header class="mast">
+  <div class="kicker">The Absurd Ordinary presents</div>
+
+  <h1>People are more than <em>first impressions.</em></h1>
+
+  <div class="stamp">SECOND EDITION · 002</div>
+
+  <p class="tagline">Ordinary life. Unordinary observations.</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="archive.html">Archive</a>
+  <a href="department.html">Departments</a>
+  <a href="ordinary-matters.html">Our Initiative</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section id="featured">
+  <div class="kicker">01 · This week's reflection</div>
+
+  <h2>People Are More Than Their First Impressions</h2>
+
+  <p class="tagline">We meet someone once and somehow leave with a whole story about them.</p>
+
+  <div class="author">By Saqeeb Aroofa</div>
+
+  <div class="block article">
+
+    <p>There is something rather amusing about the way we think we know people.</p>
+
+    <p>We meet someone for the first time and within a few minutes, our minds have already begun their little investigation. They were quiet, so perhaps they're arrogant. They spoke too much, so perhaps they're annoying. They smiled at everyone, so perhaps they're pretending. They didn't smile at all, so perhaps they're unfriendly.</p>
+
+    <p>And just like that, we have a person figured out.</p>
+
+    <p>Or at least, we think we do.</p>
+
+    <p>It's almost impressive how little information we need to form an opinion about someone. A face, a voice, a particular way of standing, a sentence spoken at the wrong moment. Sometimes all it takes is one interaction and we're ready to write an entire biography in our heads.</p>
+
+    <p>The trouble is, we rarely stop to question the author.</p>
+
+    <p>Perhaps the person who seemed distant was simply nervous. Perhaps the one who appeared confident had spent the entire morning convincing themselves not to be afraid. Perhaps the person we thought was rude was having a day they didn't know how to explain to anyone.</p>
+
+    <p>We see the outside of someone's moment and mistake it for the inside of their life.</p>
+
+    <p>And honestly, we've all been on both sides of this.</p>
+
+    <p>There have been days when someone misunderstood our silence, when a careless expression was taken as indifference, when we were reduced to a version of ourselves that didn't quite feel like us. We wanted to say, "That's not what I meant," or "You don't know me like that."</p>
+
+    <p>But how often do we offer the same patience to someone else?</p>
+
+    <p>We tend to forget that people arrive with entire lives behind them. There are childhoods we haven't heard about, disappointments they don't mention, fears they have learnt to hide and little joys that might seem insignificant to anyone else. There are things they are still trying to understand about themselves.</p>
+
+    <p>A first impression cannot possibly hold all of that.</p>
+
+    <p>Yet we carry these impressions around like facts. We tell our friends what someone is like. We decide who is worth approaching and who isn't. We build little invisible walls based on things that might not even be true.</p>
+
+    <div class="pullquote">
+      What a tiring way to be known.
+    </div>
+
+    <p>Sometimes, without realising it, we make someone spend the rest of their time proving that our first impression was wrong.</p>
+
+    <p>Perhaps getting to know someone should involve a little more curiosity and a little less certainty. Perhaps we could leave some room for people to surprise us. To be different tomorrow from who they were today. To be awkward in one room and comfortable in another. To be kind without being endlessly cheerful, confident without being loud, quiet without being mysterious.</p>
+
+    <p>People are not always consistent, and perhaps that is part of being human.</p>
+
+    <p>We change our minds. We outgrow old habits. We have moments we regret and moments we wish someone had noticed. We are capable of being many things, sometimes all in the same afternoon.</p>
+
+    <p>And maybe the most ordinary kindness we can offer another person is the chance to be more than the first version of them we happened to meet.</p>
+
+    <p>Not everyone will become our friend. Not everyone will be someone we understand. We don't have to like every person we encounter.</p>
+
+    <p>But we can remember that our first impression is only that. An impression. Not a verdict.</p>
+
+    <p>There is still a whole person standing behind it.</p>
+
+    <div class="author">Saqeeb Aroofa · The Absurd Ordinary</div>
+
+  </div>
+</section>
+
+<section class="end-note">
+  <div class="kicker">End of issue 002</div>
+
+  <p class="note">Thank you for spending a little time with us.</p>
+
+  <p>There are more stories waiting to be told.</p>
+
+  <a class="button" href="archive.html">Back to the archive</a>
+</section>
+
+<footer>
+  <div><b>The Absurd Ordinary</b></div>
+  <small>ORDINARY LIFE. UNORDINARY OBSERVATIONS.</small>
+  <small>FOUNDED BY SAQEEB AROOFA · 2026</small>
+</footer>
+
+</div>
+</body>
+</html>
